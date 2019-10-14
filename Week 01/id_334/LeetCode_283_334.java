@@ -1,4 +1,4 @@
-package Week
+package Array;
 
 //Given an array nums, write a function to move all 0's to the end of it while maintaining the relative order of the non-zero elements.
 //
@@ -21,6 +21,9 @@ package Week
 //             换句话说就是0有几个，非0元素就往前移动几位即可
 // 第三个想法V3：既然0都在后面，那么为何不直接把非0元素直接依次填充，然后需要append的0的长度=数组长度-非0元素长度
 //              换句话说就是不关心移动几位，只关心需要尾部填充几个0；与之前两个主要区别在于需要多个循环，但由于不是嵌套，因此仍是O(n)
+// 第四个想法V4：前三种其实都是站在0的思路上去想，如果考虑其他元素依次往前排的，那么可以用一个index记录下一次可以被非0元素填充的位置
+//              其他位置默认为0
+
 // -- 随着调用次数的减少，内存占用率也逐渐减少
 
 import java.util.Arrays;
@@ -29,13 +32,14 @@ public class LeetCode_283_334 {
 
     public static void main(String[] args) {
         int[] array = new int[]{0, 1, 0, 3, 12};
-        moveZeroesV3(array);
+        moveZeroesV4(array);
         System.out.println(Arrays.toString(array));
     }
 
     /**
      * Runtime: 0 ms, faster than 100.00% of Java online submissions for Move Zeroes.
-     Memory Usage: 38 MB, less than 91.61% of Java online submissions for Move Zeroes.
+     * Memory Usage: 38 MB, less than 91.61% of Java online submissions for Move Zeroes.
+     *
      * @param nums
      */
     public static void moveZeroesV1(int[] nums) {
@@ -59,7 +63,8 @@ public class LeetCode_283_334 {
 
     /**
      * Runtime: 0 ms, faster than 100.00% of Java online submissions for Move Zeroes.
-     Memory Usage: 37.7 MB, less than 100.00% of Java online submissions for Move Zeroes.
+     * Memory Usage: 37.7 MB, less than 100.00% of Java online submissions for Move Zeroes.
+     *
      * @param nums
      */
     public static void moveZeroesV2(int[] nums) {
@@ -81,8 +86,7 @@ public class LeetCode_283_334 {
 
     /**
      * Runtime: 0 ms, faster than 100.00% of Java online submissions for Move Zeroes.
-     Memory Usage: 36.6 MB, less than 100.00% of Java online submissions for Move Zeroes.
-     * @param nums
+     * Memory Usage: 36.5 MB, less than 100.00% of Java online submissions for Move Zeroes.
      */
     public static void moveZeroesV3(int[] nums) {
         if (nums == null || nums.length == 0) {
@@ -98,6 +102,28 @@ public class LeetCode_283_334 {
             while (nums.length - zeroCount > 0) {
                 nums[zeroCount++] = 0;
             }
+        }
+    }
+
+    /**
+     * Runtime: 0 ms, faster than 100.00% of Java online submissions for Move Zeroes.
+     * Memory Usage: 36.5 MB, less than 100.00% of Java online submissions for Move Zeroes.
+     *
+     * @param nums
+     */
+    public static void moveZeroesV4(int[] nums) {
+        if (nums == null || nums.length == 0) {
+            return;
+        }
+        int nextNonZeroIndex = 0;
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] != 0) {
+                nums[nextNonZeroIndex] = nums[i];
+                if (i != nextNonZeroIndex++) {
+                    nums[i] = 0;
+                }
+            }
+
         }
     }
 
