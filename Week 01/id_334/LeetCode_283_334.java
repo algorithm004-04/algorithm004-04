@@ -38,7 +38,7 @@ public class LeetCode_283_334 {
      Memory Usage: 38 MB, less than 91.61% of Java online submissions for Move Zeroes.
      * @param nums
      */
-    public void moveZeroesV1(int[] nums) {
+    public static void moveZeroesV1(int[] nums) {
         if (nums == null || nums.length == 0) {
             return;
         }
