@@ -137,7 +137,7 @@
 
 栈、队列：
 
-1. https://leetcode.com/problems/design-circular-deque
-2. https://leetcode.com/problems/trapping-rain-water/
-3. 用add first或add last这套新的API改写Deque的代码
-4. 分析Queue和Priority Queue的源码
+- [ ] https://leetcode.com/problems/design-circular-deque
+- [ ] https://leetcode.com/problems/trapping-rain-water/
+- [ ] 用add first或add last这套新的API改写Deque的代码
+- [ ] 分析Queue和Priority Queue的源码
