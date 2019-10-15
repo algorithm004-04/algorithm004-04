@@ -49,7 +49,7 @@ for (Post post : postList) {
     // 填充发帖人信息
   }
 }
-···
+```
 
 HashMap的特性呢？
 1. Java中的HashMap
