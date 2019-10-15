@@ -13,6 +13,7 @@
 3. 多写代码 
 4. 列举几个测试用例，确保正确
 
+
 #### 刷题五遍
 1. 第一遍：先花5分钟，最多15分钟去思考解体思路，如有解体思路，则继续解体，如果完全没有思路，则直接看答案，并且理解和背诵解体思路。
 2. 第二遍：不管是通过自己的思路，还是通过答案得出的思路，然后在leetcode上进行解题，直到通过为止，争取保证击败80%的人，确保时空复杂度的最优的。
@@ -47,7 +48,9 @@
 
 # 经典题目
 
-斐波那契数列问题：对应leetcode地址：https://leetcode-cn.com/problems/fibonacci-number/
+1. 斐波那契数列问题：
+
+对应 leetcode 地址：https://leetcode-cn.com/problems/fibonacci-number/
 
 
 ![](https://user-gold-cdn.xitu.io/2019/10/10/16db5bc39f41c8b5?w=1992&h=1276&f=png&s=484817)
