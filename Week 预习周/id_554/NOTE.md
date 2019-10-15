@@ -24,17 +24,45 @@
 
 ![自己的数据结构-脑图](https://github.com/Kevin922/algorithm004-04/blob/master/Week%20%E9%A2%84%E4%B9%A0%E5%91%A8/id_554/Data%20Structure.png)
 
-### 我最喜欢的数据结构 - 散列表
-前不久
+最后是算法。知道了算法固定步骤，但是每一个又各有不同。我一开始觉得这是一个个的问题，等我去一个个地解决，然后再一个个地熟练。最近想，可能我首先需要不做一个三季人，常见算法都写过，常见题型都看过。然后再像背九九乘法表一样，熟练掌握。
 
+### 我最喜欢的数据结构 - 散列表
+前不久在做论坛，基于微服务的架构，`帖子`和`用户`分为两个服务。帖子列表`postList`的分页查询接口需要返回发帖人userId的用户信息（姓名、头像）。用户服务提供了多个userId查询用户信息的接口，返回用户信息列表`userList`。如何给`postList`填充发帖人信息？
+
+这是一个简单的问题，你会怎么做？
+
+我的Java代码，如下：
+
+``` Java
+List<Post> postList = getPostList();
+// 去重userId
+Set<Long> postUserIds = postList.stream().map(Post::getUserId).collection(Colleactors.toSet());
+
+List<User> userList = getUserListFromUserServer(postUserIds);
+// 字典 key - userId, value - user
+Map<Long, User> userMap = userList.stream().colleciton(Colleactors.toMap(User::getId, e -> e, (o1, o2) -> o1));
+// 填充发帖人信息
+for (Post post : postList) {
+  // 字典中是否存在user
+  if (userMap.get(post.getUserId) != null) {
+    User poster = userMap.get(post.getUserId);
+    // 填充发帖人信息
+  }
+}
+···
+
+HashMap的特性呢？
 1. Java中的HashMap
 2. HashMap冲突问题
 3. HashMap应用
 4. HashMap无序
 
+HashMap的题型呢？
+题型分析呢？
+
 
 ### 关于覃超老师的`五毒神掌`的想法
-1. 学习效率问题。
+1. 刷题效率问题。
 2. 如果自己实现一个『提醒自己复习』的软件呢？
 
 
