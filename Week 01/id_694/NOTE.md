@@ -127,13 +127,13 @@
 
 数组、链表：
 
-1. https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/ (26) done
-2. https://leetcode-cn.com/problems/rotate-array/ (189) done
-3. https://leetcode-cn.com/problems/merge-two-sorted-lists/ (21) done
-4. https://leetcode-cn.com/problems/merge-sorted-array/ (88) done
-5. https://leetcode-cn.com/problems/two-sum/ (1) done
-6. https://leetcode-cn.com/problems/move-zeroes/ (283)  done
-7. https://leetcode-cn.com/problems/plus-one/ (66) done
+[x] https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/ (26)
+[x] https://leetcode-cn.com/problems/rotate-array/ (189)
+[x] https://leetcode-cn.com/problems/merge-two-sorted-lists/ (21)
+[x] https://leetcode-cn.com/problems/merge-sorted-array/ (88)
+[x] https://leetcode-cn.com/problems/two-sum/ (1)
+[x] https://leetcode-cn.com/problems/move-zeroes/ (283) 
+[x] https://leetcode-cn.com/problems/plus-one/ (66)
 
 栈、队列：
 
