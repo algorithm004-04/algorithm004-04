@@ -40,7 +40,8 @@ Set<Long> postUserIds = postList.stream().map(Post::getUserId).collection(Collea
 
 List<User> userList = getUserListFromUserServer(postUserIds);
 // 字典 key - userId, value - user
-Map<Long, User> userMap = userList.stream().colleciton(Colleactors.toMap(User::getId, e -> e, (o1, o2) -> o1));
+Map<Long, User> userMap = 
+          userList.stream().colleciton(Colleactors.toMap(User::getId, e -> e, (o1, o2) -> o1));
 // 填充发帖人信息
 for (Post post : postList) {
   // 字典中是否存在user
