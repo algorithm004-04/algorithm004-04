@@ -1,5 +1,5 @@
 // 方法1： 先交换再补0
-class Solution {
+class LeetCode_283_719 {
     public void moveZeroes(int[] nums) {
         int j = 0;
         for (int num : nums) {
