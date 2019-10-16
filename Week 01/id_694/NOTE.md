@@ -72,8 +72,12 @@
 
 **参考资料：**
 
-* LRU Cache - Linked list https://www.jianshu.com/p/b1ab4a170c3c https://leetcode-cn.com/problems/lru-cache
-* Redis - Skip List https://redisbook.readthedocs.io/en/latest/internal-datastruct/ skiplist.html https://www.zhihu.com/question/20202931
+* LRU Cache - Linked list
+    * https://www.jianshu.com/p/b1ab4a170c3c
+    * https://leetcode-cn.com/problems/lru-cache
+* Redis - Skip List
+    * https://redisbook.readthedocs.io/en/latest/internal-datastruct/skiplist.html
+    * https://www.zhihu.com/question/20202931
 
 ## 栈、队列、双端队列、优先级队列
 
@@ -103,25 +107,24 @@
 
 数组：
 
-1. https://leetcode-cn.com/problems/container-with-most-water/
-2. https://leetcode-cn.com/problems/move-zeroes/
-3. https://leetcode-cn.com/problems/climbing-stairs/ 
-4. https://leetcode-cn.com/problems/3sum/ (高频老题）
+- [x] https://leetcode-cn.com/problems/container-with-most-water/  (11)
+- [x] https://leetcode-cn.com/problems/climbing-stairs/  (70)
+- [x] https://leetcode-cn.com/problems/3sum/ (高频老题） (15)
 
 链表：
 
-1. https://leetcode-cn.com/problems/reverse-linked-list/
-2. https://leetcode-cn.com/problems/swap-nodes-in-pairs
-3. https://leetcode-cn.com/problems/linked-list-cycle
-4. https://leetcode-cn.com/problems/linked-list-cycle-ii
-5. https://leetcode-cn.com/problems/reverse-nodes-in-k-group/
+- [ ] https://leetcode-cn.com/problems/reverse-linked-list/  (206)
+- [ ] https://leetcode-cn.com/problems/swap-nodes-in-pairs  (24)
+- [ ] https://leetcode-cn.com/problems/linked-list-cycle  (141)
+- [ ] https://leetcode-cn.com/problems/linked-list-cycle-ii   (142)
+- [ ] https://leetcode-cn.com/problems/reverse-nodes-in-k-group/  (25)
 
 栈、队列
 
-1. https://leetcode-cn.com/problems/valid-parentheses/ （- 最近相关性 —> 栈！）
-2. https://leetcode-cn.com/problems/min-stack/
-3. https://leetcode-cn.com/problems/largest-rectangle-inhistogram 
-4. https://leetcode-cn.com/problems/sliding-window-maximum
+- [ ] https://leetcode-cn.com/problems/valid-parentheses/ （- 最近相关性 —> 栈！） (20)
+- [ ] https://leetcode-cn.com/problems/min-stack/  (155)
+- [ ] https://leetcode-cn.com/problems/largest-rectangle-in-histogram  (84)
+- [ ] https://leetcode-cn.com/problems/sliding-window-maximum  (239)
 
 ### 作业
 
@@ -137,7 +140,7 @@
 
 栈、队列：
 
-- [ ] https://leetcode.com/problems/design-circular-deque
-- [ ] https://leetcode.com/problems/trapping-rain-water/
+- [ ] https://leetcode-cn.com/problems/design-circular-deque  (641)
+- [ ] https://leetcode-cn.com/problems/trapping-rain-water/  (42)
 - [ ] 用add first或add last这套新的API改写Deque的代码
 - [ ] 分析Queue和Priority Queue的源码
