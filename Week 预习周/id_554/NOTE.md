@@ -24,12 +24,14 @@
 
 ![自己的数据结构-脑图](https://github.com/Kevin922/algorithm004-04/blob/master/Week%20%E9%A2%84%E4%B9%A0%E5%91%A8/id_554/Data%20Structure.png)
 
-最后是算法。知道了算法固定步骤，但是每一个又各有不同。我一开始觉得这是一个个的问题，等我去一个个地解决，然后再一个个地熟练。最近想，可能我首先需要不做一个三季人，常见算法都写过，常见题型都看过。然后再像背九九乘法表一样，熟练掌握。
+### 散列表 - 键值对
+散列表是我非常喜欢的数据结构。理想情况，查询时间复杂度O(1)，增删改时间复杂度O(1)。当然，只是理想，散列冲突会改变时间复杂度。不过依然比链表的查询效率高。不需要扩容时，比数组的增删代价小。
 
-### 我最喜欢的数据结构 - 散列表
-前不久在做论坛，基于微服务的架构，`帖子`和`用户`分为两个服务。帖子列表`postList`的分页查询接口需要返回发帖人userId的用户信息（姓名、头像）。用户服务提供了多个userId查询用户信息的接口，返回用户信息列表`userList`。如何给`postList`填充发帖人信息？
+通过键可以快速查到值，这样键值对的思想用途广泛。C++、Java提供了类库，Python、JavaScript、Go语言层面支持。Redis也采用键值的查询方式。Json、Xml、YAML语言，Java工程中的property文件等等，也可以从键值对的角度来看。
 
-这是一个简单的问题，你会怎么做？
+前不久做论坛，基于微服务架构，`帖子`和`用户`分为两个服务。帖子列表`postList`的分页查询接口需要返回发帖人userId的用户信息（姓名、头像）。用户服务提供了多个userId查询用户信息的接口，返回用户信息列表`userList`。如何给`postList`填充发帖人信息？
+
+这个问题，你会怎么做？
 
 我的Java代码，如下：
 
@@ -51,6 +53,42 @@ for (Post post : postList) {
   }
 }
 ```
+
+上面代码，最基本的思想就是键值对，建立字典后不必通过第二次循环这种高消耗的操作来查询想要的数据。
+
+我们来看另一个小问题：LeetCode上第一题 [两数之和](https://leetcode-cn.com/problems/two-sum/)。思考一下呢。你会怎么解决？
+
+下面是我在今年5月份的解法。顺便说，我第一反应是用两重循环，简单粗暴有效。第二反应是用键值对。这是在早晚地铁上偶尔想想完成的，现在回忆估计前后花了2天时间。代码实现是在IDE idea里面估计敲了30分钟完成的。解决了问题我也很高兴，不过潜意识里隐隐感觉这事有诈，时间成本太高了。*碎片化时间*的方法可能对我有毒。最后一小节的*五毒神掌*会讨论聊聊，书归正传，看代码。 
+
+Java代码：
+
+``` Java
+class Solution {
+    public int[] twoSum(int[] nums, int target) {
+        Map<Integer, Integer> numIndexMap = new HashMap<>(nums.length);
+        // 我做题除非题目要去，一般不考虑空间，哈哈
+        // 首先，数组 转为 散列表（字典、Map）
+        for (Integer i = 0; i < nums.length; i++) {
+            numIndexMap.put(nums[i], i);
+        }
+        // 遍历数组，根据target做减法，判断散列表中是否存在
+        for (Integer i = 0; i < nums.length; i++) {
+            // 存在，返回结果
+            if (null != numIndexMap.get(target - nums[i])  
+                && !numIndexMap.get(target - nums[i]).equals(i)) {
+                Integer finalI = i;
+                return new int[]{i, numIndexMap.get(target - nums[finalI])};
+            }
+        }
+        // 不存在，返回空
+        return new int[]{};
+    }
+}
+```
+
+上面代码可以优化，比如优化为一次循环效率更好，而且在一般情况，不会将全部数组转换为散列表。
+
+这里想分享的是键值对的思想，能更方便地解决问题。
 
 HashMap的特性呢？
 1. Java中的HashMap
