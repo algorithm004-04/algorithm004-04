@@ -45,7 +45,7 @@ class LeetCode_88_334 {
 //        mergeV3(nums1,1,nums2,1);
 
         int[] nums2 = new int[]{4, 5, 6};
-        mergeV3(nums1, 3, nums2, 3);
+        mergeV2_1(nums1, 3, nums2, 3);
         System.out.println(Arrays.toString(nums1));
     }
 
@@ -72,6 +72,14 @@ class LeetCode_88_334 {
             nums1[last--] = nums1[m] < nums2[n] ? nums2[n--] : nums1[m--];
         }
         System.arraycopy(nums2, 0, nums1, 0, n + 1);
+    }
+
+    /**
+     * super cool code
+     * 基于mergeV2简化，核心点在于变更了m和n的判断条件以及随之的变动
+     */
+    public static void mergeV2_1(int[] nums1, int m, int[] nums2, int n) {
+        while (n > 0) nums1[m + n - 1] = (m == 0 || nums2[n - 1] > nums1[m - 1]) ? nums2[--n] : nums1[--m];
     }
 
     public static void mergeV3(int[] nums1, int m, int[] nums2, int n) {
