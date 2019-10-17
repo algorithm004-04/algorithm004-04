@@ -7,7 +7,7 @@
 
 目录：
 1. [目前我脑中的`数据结构和算法`](https://github.com/Kevin922/algorithm004-04/blob/master/Week%20%E9%A2%84%E4%B9%A0%E5%91%A8/id_554/NOTE.md#%E7%9B%AE%E5%89%8D%E6%88%91%E8%84%91%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95)
-2. [散列表 - 键值对](https://github.com/Kevin922/algorithm004-04/blob/master/Week%20%E9%A2%84%E4%B9%A0%E5%91%A8/id_554/NOTE.md#散列表 - 键值对)
+2. [散列表 - 键值对](https://github.com/Kevin922/algorithm004-04/blob/master/Week%20%E9%A2%84%E4%B9%A0%E5%91%A8/id_554/NOTE.md#%E6%95%A3%E5%88%97%E8%A1%A8---%E9%94%AE%E5%80%BC%E5%AF%B9)
 3. [关于覃超老师的`五毒神掌`的想法](https://github.com/Kevin922/algorithm004-04/blob/master/Week%20%E9%A2%84%E4%B9%A0%E5%91%A8/id_554/NOTE.md#关于覃超老师的`五毒神掌`的想法)
 
 
