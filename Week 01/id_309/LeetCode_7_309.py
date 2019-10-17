@@ -55,7 +55,7 @@ class Solution5:
             return digits
 
 class Solution:
-    def plusOne(self, digits):
+    def plusOne(self, digits: List[int]) -> List[int]:
         for i in range(len(digits)):
             if digits[~i] < 9:
                 digits[~i] += 1
