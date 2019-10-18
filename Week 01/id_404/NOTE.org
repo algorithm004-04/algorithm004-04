@@ -1,0 +1,66 @@
+* 数组、链表、跳表
+** 数组 Array
+*数组(Array)是一种线性表数据结构，使用一组连续的内存空间来存储具有相同类型的数据
+(也可以是泛型)*
+
+*** 特性
+1. 随机访问（O(1)）
+
+2. 插入和删除操作（O(n) )
+   在第k个位置插入数据需要将k后面的元素后移一位；将第k个位置的元素删除需要将k后面的元素前移一位
+
+*** 时间复杂度：
+| 操作    | 复杂度 |
+|---------+--------|
+| prepend | O(1)   |
+| append  | O(1)   |
+| lookup  | O(1)   |
+| insert  | O(n)   |
+| delete  | O(n)   |
+
+*** 参考资料
+[[http://developer.classpath.org/doc/java/util/ArrayList-source.html][Java 源码分析（ArrayList）]]
+
+** 链表 Linked list
+*链表不需要一块连续的内存空间，它通过指针将一组零散的内存块串联起来*
+每个节点除了存储数据外还要记录下一个节点的地址，头结点记录链表基地址。
+
+常见的结构有：单链表、双链表、循环链表、双向循环链表。
+循环链表的尾节点的 =next= 指针指向头结点；
+双向链表在单链表的基础上增加 =prev= 指针指向前驱节点，所以支持O(1)的时间复杂度找到前驱节点。
+
+*** 特性
+1. 插入和删除操作只需要考虑相邻节点的指针变化，时间复杂度为O(1)
+2. 随机访问的性能没有数组好，访问第k个元素需要O(n)的时间复杂度
+
+*** 时间复杂度：
+| 操作    | 复杂度 |
+|---------+--------|
+| prepend | O(1)   |
+| append  | O(1)   |
+| lookup  | O(n)  |
+| insert  | O(1)  |
+| delete  | O(1)  |
+
+*** 参考资料
+[[https://www.geeksforgeeks.org/implementing-a-linked-list-in-java-using-class/][Linked List 的标准实现代码]]
+[[http://www.cs.cmu.edu/~adamchik/15-121/lectures/Linked%2520Lists/code/LinkedList.java][Linked List 示例代码]]
+[[http://developer.classpath.org/doc/java/util/LinkedList-source.html][Java 源码分析（LinkedList）]]
+[[https://www.jianshu.com/p/b1ab4a170c3c][LRU缓存算法]]
+[[https://leetcode-cn.com/problems/lru-cache][leetcode lru cache]]
+
+** 跳表
+在链表的基础上，每隔几个节点提取出一个节点到上一级，抽出来一个索引层，索引层节点
+通过增加一个 =down= 指针指向下层节点。
+
+*** 时间复杂度分析
+按每两个节点抽出一级索引，那第一级就是 =n/2= 个节点，以此类推，第k级索引节点个数就
+是 =n/(2^k)= 。如果有 h 级索引，最高级有 2 个节点，则 =h=log2n - 1=, 每一层最多遍历
+3 个节点，所以 总遍历节点个数最多 =3*h= ，时间复杂度为 O(logn)。
+
+*** 空间复杂度分析
+其实就是对等比数列求和，空间复杂度为 O(n)
+
+*** 参考资料：
+[[https://redisbook.readthedocs.io/en/latest/internal-datastruct/skiplist.html][跳跃表]]
+[[https://www.zhihu.com/question/20202931][为啥 redis 使用跳表(skiplist)而不是使用 red-black？]]
