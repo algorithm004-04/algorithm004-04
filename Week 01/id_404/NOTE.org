@@ -10,7 +10,7 @@
    在第k个位置插入数据需要将k后面的元素后移一位；将第k个位置的元素删除需要将k后面的元素前移一位
 
 *** 时间复杂度：
-| 操作    | 复杂度 |
+| 操作    | 复杂度  |
 |---------+--------|
 | prepend | O(1)   |
 | append  | O(1)   |
@@ -19,7 +19,7 @@
 | delete  | O(n)   |
 
 *** 参考资料
-[[http://developer.classpath.org/doc/java/util/ArrayList-source.html][Java 源码分析（ArrayList）]]
+- [[http://developer.classpath.org/doc/java/util/ArrayList-source.html][Java 源码分析（ArrayList）]]
 
 ** 链表 Linked list
 *链表不需要一块连续的内存空间，它通过指针将一组零散的内存块串联起来*
@@ -34,20 +34,20 @@
 2. 随机访问的性能没有数组好，访问第k个元素需要O(n)的时间复杂度
 
 *** 时间复杂度：
-| 操作    | 复杂度 |
+| 操作    | 复杂度  |
 |---------+--------|
 | prepend | O(1)   |
 | append  | O(1)   |
-| lookup  | O(n)  |
-| insert  | O(1)  |
-| delete  | O(1)  |
+| lookup  | O(n)   |
+| insert  | O(1)   |
+| delete  | O(1)   |
 
 *** 参考资料
-[[https://www.geeksforgeeks.org/implementing-a-linked-list-in-java-using-class/][Linked List 的标准实现代码]]
-[[http://www.cs.cmu.edu/~adamchik/15-121/lectures/Linked%2520Lists/code/LinkedList.java][Linked List 示例代码]]
-[[http://developer.classpath.org/doc/java/util/LinkedList-source.html][Java 源码分析（LinkedList）]]
-[[https://www.jianshu.com/p/b1ab4a170c3c][LRU缓存算法]]
-[[https://leetcode-cn.com/problems/lru-cache][leetcode lru cache]]
+- [[https://www.geeksforgeeks.org/implementing-a-linked-list-in-java-using-class/][Linked List 的标准实现代码]]
+- [[http://www.cs.cmu.edu/~adamchik/15-121/lectures/Linked%2520Lists/code/LinkedList.java][Linked List 示例代码]]
+- [[http://developer.classpath.org/doc/java/util/LinkedList-source.html][Java 源码分析（LinkedList）]]
+- [[https://www.jianshu.com/p/b1ab4a170c3c][LRU缓存算法]]
+- [[https://leetcode-cn.com/problems/lru-cache][leetcode lru cache]]
 
 ** 跳表
 在链表的基础上，每隔几个节点提取出一个节点到上一级，抽出来一个索引层，索引层节点
@@ -62,5 +62,5 @@
 其实就是对等比数列求和，空间复杂度为 O(n)
 
 *** 参考资料：
-[[https://redisbook.readthedocs.io/en/latest/internal-datastruct/skiplist.html][跳跃表]]
-[[https://www.zhihu.com/question/20202931][为啥 redis 使用跳表(skiplist)而不是使用 red-black？]]
+- [[https://redisbook.readthedocs.io/en/latest/internal-datastruct/skiplist.html][跳跃表]]
+- [[https://www.zhihu.com/question/20202931][为啥 redis 使用跳表(skiplist)而不是使用 red-black？]]
