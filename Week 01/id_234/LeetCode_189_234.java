@@ -1,4 +1,4 @@
-public class Main {
+public class Solution {
   // 暴力 T:O(k*n) S:O(1)
   public static void rotate1(int[] nums, int k) {
 
@@ -13,5 +13,15 @@ public class Main {
       }
     }
   }
-  //
+  //双数组 T:O(n) S:O(n)
+  public void rotate(int[] nums, int k) {
+      k = k % nums.length;
+      int[] copy_nums = new int[nums.length];
+      for (int i = 0; i<nums.length;i++){
+          copy_nums[(i+k)%nums.length]=nums[i];
+      }
+      for (int j = 0;j<nums.length;j++){
+          nums[j]=copy_nums[j];
+      }
+  }
 }

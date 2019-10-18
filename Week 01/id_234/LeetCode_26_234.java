@@ -1,4 +1,4 @@
-public class Main {
+public class Solution {
   // 双指针 T:O(n) S:O(1)
   public static int removeDuplicates(int[] nums) {
     if (nums == null || nums.length == 0) {
