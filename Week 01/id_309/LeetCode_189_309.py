@@ -26,6 +26,15 @@ class Solution:
         a.rotate(k)
         nums[:] = list(a)
 
+class Solution:
+    def rotate(self, nums: List[int], k: int) -> None:
+        """
+        Do not return anything, modify nums in-place instead.
+        """
+        n = len(nums)
+        k = k % n
+        nums[:] = nums[n-k:] + nums[:n-k]
+
 
 if __name__ == "__main__":
     nums = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21]
