@@ -24,9 +24,7 @@ class Solution:
         import collections
         a = collections.deque(nums)
         a.rotate(k)
-        a = list(a)
-        nums[:] = a
-
+        nums[:] = list(a)
 
 
 if __name__ == "__main__":
