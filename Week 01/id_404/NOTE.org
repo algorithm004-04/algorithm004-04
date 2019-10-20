@@ -75,3 +75,7 @@
  - [X] [[https://leetcode-cn.com/problems/move-zeroes][283-move-zeroes]] [[file:LeetCode_283_404.java][作业]]
  - [X] [[https://leetcode-cn.com/problems/plus-one/][66-plus-one]] [[file:LeetCode_66_404.java][作业]]
 ** Lesson 4
+ - [ ] https://leetcode-cn.com/problems/design-circular-deque
+ - [X] https://leetcode-cn.com/problems/trapping-rain-water/
+ - [ ] 用add first 或 add last 这套新的 API 改写 Deque 的代码
+ - [ ] Priority Queue 源码分析
