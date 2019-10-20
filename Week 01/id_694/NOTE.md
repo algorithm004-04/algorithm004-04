@@ -81,6 +81,24 @@
 
 ## 栈、队列、双端队列、优先级队列
 
+* 栈(stack)：先入后出 【O(1)】
+* 队列(queue)：先进先出 【O(1)】
+
+* 实际应用中更常用双端队列(deque)【O(1)】:
+
+    ![deque](./assets/deque.png)
+
+* 优先级队列(Priority Queue)：按照元素的优先级取出，插入【O(1)】，取出操作【O(logN)】
+
+**相关源码**
+
+* Stack: http://developer.classpath.org/doc/java/util/Stack-source.html
+* Queue: http://fuseyism.com/classpath/doc/java/util/Queue-source.html 
+* PriorityQueue https://docs.oracle.com/javase/10/docs/api/java/util/PriorityQueue.html
+* Deque https://docs.oracle.com/javase/10/docs/api/java/util/Deque.html
+* heapq : https://docs.python.org/2/library/heapq.html
+* 高性能的 container 库： https://docs.python.org/2/library/collections.html
+
 
 ## 总结
 
@@ -97,9 +115,12 @@
 **常用的检查链表代码的边界条件：**
 
 1. 链表空时，代码是否正常工作
-2. 只有一个或两个节点时，链表空时，代码是否正常工作
-3. 处理头结点、尾节点时，链表空时，代码是否正常工作
+2. 只有一个或两个节点时，代码是否正常工作
+3. 处理头结点、尾节点时，代码是否正常工作
 
+从栈和队列的操作特性上来看，他们都是⼀种“操作受限”的线性表，只允许在⼀端插⼊和删除数据。
+
+从功能上来说，数组或链表是可以替代栈和队列的，但是特定的数据结构是对特定场景的抽象，数组或链表暴露了太多的接口，使用上自然就更容易出错。
 
 ## 实战
 
@@ -113,15 +134,15 @@
 
 链表：
 
-- [ ] https://leetcode-cn.com/problems/reverse-linked-list/  (206)
-- [ ] https://leetcode-cn.com/problems/swap-nodes-in-pairs  (24)
-- [ ] https://leetcode-cn.com/problems/linked-list-cycle  (141)
+- [x] https://leetcode-cn.com/problems/reverse-linked-list/  (206)
+- [x] https://leetcode-cn.com/problems/swap-nodes-in-pairs  (24)
+- [x] https://leetcode-cn.com/problems/linked-list-cycle  (141)
 - [ ] https://leetcode-cn.com/problems/linked-list-cycle-ii   (142)
 - [ ] https://leetcode-cn.com/problems/reverse-nodes-in-k-group/  (25)
 
 栈、队列
 
-- [ ] https://leetcode-cn.com/problems/valid-parentheses/ （- 最近相关性 —> 栈！） (20)
+- [x] https://leetcode-cn.com/problems/valid-parentheses/ （- 最近相关性 —> 栈！） (20)
 - [ ] https://leetcode-cn.com/problems/min-stack/  (155)
 - [ ] https://leetcode-cn.com/problems/largest-rectangle-in-histogram  (84)
 - [ ] https://leetcode-cn.com/problems/sliding-window-maximum  (239)
