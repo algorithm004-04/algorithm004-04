@@ -12,7 +12,7 @@
  * @author liqiuying
  * @date 2019-10-18
  */
-public class MoveZeroes {
+public class LeetCode_283_429 {
     /**
      * 移动零算法
      *
