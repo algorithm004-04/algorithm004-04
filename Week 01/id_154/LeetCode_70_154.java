@@ -31,7 +31,6 @@ class climbStairs {
         return climb_Stairs(n, memo);
     }
 
-
     public int climb_Stairs(int n, int memo[]) {
         if (n < 3) {
             memo[n] = n;
@@ -41,11 +40,6 @@ class climbStairs {
         }
 
         return memo[n];
-    }
-
-    public static void main(String[] args) {
-        int count = new climbStairs().climbStairs(44);
-        System.out.println(count);
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)
