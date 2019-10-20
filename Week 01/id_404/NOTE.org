@@ -64,3 +64,14 @@
 *** 参考资料：
 - [[https://redisbook.readthedocs.io/en/latest/internal-datastruct/skiplist.html][跳跃表]]
 - [[https://www.zhihu.com/question/20202931][为啥 redis 使用跳表(skiplist)而不是使用 red-black？]]
+
+* Homework
+** Lesson 3
+ - [X] [[https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/][26-remove-duplicates-from-sorted-array]] [[file:LeetCode_26_404.java][作业]]
+ - [X] [[https://leetcode-cn.com/problems/rotate-array/][189-rorate-array]] [[file:LeetCode_189_404.java][作业]]
+ - [X] [[https://leetcode-cn.com/problems/merge-two-sorted-lists/][21-merge-two-sorted-lists]] [[file:LeetCode_21_404.java][作业]]
+ - [X] [[https://leetcode-cn.com/problems/merge-sorted-array/][88-merge-sorted-array]] [[file:LeetCode_88_404.java][作业]]
+ - [X] [[https://leetcode-cn.com/problems/two-sum/][1-two-sum]] [[file:LeetCode_1_404.java][作业]]
+ - [X] [[https://leetcode-cn.com/problems/move-zeroes][283-move-zeroes]] [[file:LeetCode_283_404.java][作业]]
+ - [X] [[https://leetcode-cn.com/problems/plus-one/][66-plus-one]] [[file:LeetCode_66_404.java][作业]]
+** Lesson 4
