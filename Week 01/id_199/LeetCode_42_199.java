@@ -2,27 +2,37 @@ package com.wujunze.Trapping_Rain_Water;
 
 import java.util.LinkedList;
 
-
-public class Solution {
+class Solution {
     public int trap(int[] height) {
-        int sum = 0;
-        Stack<Integer> stack = new Stack<>();
-        int current = 0;
-        while (current < height.length) {
-            //如果栈不空并且当前指向的高度大于栈顶高度就一直循环
-            while (!stack.empty() && height[current] > height[stack.peek()]) {
-                int h = height[stack.peek()]; //取出要出栈的元素
-                stack.pop(); //出栈
-                if (stack.empty()) { // 栈空就出去
-                    break;
-                }
-                int distance = current - stack.peek() - 1; //两堵墙之前的距离。
-                int min = Math.min(height[stack.peek()], height[current]);
-                sum = sum + distance * (min - h);
-            }
-            stack.push(current); //当前指向的墙入栈
-            current++; //指针后移
+        if (null == height || 0 == height.length){
+            return 0;
         }
-        return sum;
+        int area = 0;
+        int left = 0; // 左边界
+        int right = height.length - 1; // 右边界
+        int left_max = height[left];
+        int right_max = height[right];
+        while (left <= right) {
+            // 左边低于右边 则从左边开始计算
+            if (left_max <= right_max){
+                // 没有高于左边最大值 则可以蓄水
+                if (left_max >= height[left]){
+                    area += (left_max - height[left]);
+                } else {
+                    left_max = height[left];
+                }
+                left++;
+            } else {
+                // 从右边开始计算
+                // 没有高于右边最大值 则可以蓄水
+                if (right_max >= height[right]){
+                    area += (right_max -height[right]) ;
+                } else {
+                    right_max  = height[right];
+                }
+                right--;
+            }
+        }
+        return area;
     }
 }
