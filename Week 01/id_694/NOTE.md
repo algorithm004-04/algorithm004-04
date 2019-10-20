@@ -162,6 +162,6 @@
 栈、队列：
 
 - [ ] https://leetcode-cn.com/problems/design-circular-deque  (641)
-- [ ] https://leetcode-cn.com/problems/trapping-rain-water/  (42)
+- [x] https://leetcode-cn.com/problems/trapping-rain-water/  (42)
 - [ ] 用add first或add last这套新的API改写Deque的代码
 - [ ] 分析Queue和Priority Queue的源码
