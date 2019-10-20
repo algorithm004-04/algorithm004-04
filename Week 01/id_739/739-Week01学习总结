@@ -1,0 +1,28 @@
+1.c++的stack.pop()没有返回值。
+2.对stack和queue使用不是很熟练，在想题的时候很少往这方向想
+3.三元运算符对简化代码（判断语句）作用很大（但不减少时间复杂度）
+4.递归代码简洁但空间消耗比较大
+5.双指针是个好东西 （(⊙﹏⊙)）
+
+
+//合并两个有序链表  
+        
+     /*   if(l1 != NULL){
+            while( l1 != NULL){
+                pre -> next = l1;
+                l1 = l1 ->next;
+                pre = pre ->next;
+            }
+        }
+        if(l2 != NULL){
+            while( l2 != NULL){
+                pre ->next = l2;
+                l2 = l2 -> next;
+                pre = pre ->next;
+            }
+            
+        }
+        pre ->next = NULL; */    
+//等价于
+  // pre ->next = l1 != NULL ? l1 : l2;   
+
