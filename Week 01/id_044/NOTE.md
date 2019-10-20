@@ -18,6 +18,7 @@
         还有一个很重要的思想是双指针法，从两端往中间走，从而形成左右夹逼，使得解决问题的速度更快
 第四课：
     (1).栈(stack)的结构(Last in - First out)，以及操作(push,pop,peek),其中添加、删除的时间复杂度都为O
+        如果最近相关性问题可以用栈来解决
     (2).队列(queue)的结构(First in - First out)，以及操作(offer,poll,peek)，添加、删除的时间复杂度都为O
     (3).双端队列(Deque)，操作(push,pop,peek,addLast,peekLast,removeLast),两端都可以进出的queue，插入和删除的时间复杂度都是O(1)
 
