@@ -6,8 +6,10 @@ class ListNode:
 
 class Solution:
 # iteratively
+# 执行用时 :44 ms, 在所有 python3 提交中击败了95.40%的用户
+# 内存消耗 :13.8 MB, 在所有 python3 提交中击败了5.66%的用户
     def mergeTwoLists(self, l1: ListNode, l2: ListNode) -> ListNode:
-        cur1, cur2 = l1, l2
+        cur1,cur2 = l1,l2
         new = ListNode(0)
         cur = new
         while cur1 != None and cur2 != None:
@@ -28,11 +30,13 @@ class Solution:
 
         return new.next
 
-    # recursively
+# recursively
+# 执行用时 :36 ms, 在所有 python3 提交中击败了99.82%的用户
+# 内存消耗 :13.9 MB, 在所有 python3 提交中击败了5.66%的用户
     def MergeTwoLists(self, l1: ListNode, l2: ListNode) -> ListNode:
         if not l1 or not l2:
-            return l1 or l2
-        if l1.val < l2.val:
+            return l2 or l1
+        if l1.val <= l2.val:
             l1.next = self.recursionMergeTwoLists(l1.next, l2)
             return l1
         else:
