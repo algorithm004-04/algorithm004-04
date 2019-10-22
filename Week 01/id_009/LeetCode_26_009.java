@@ -1,7 +1,5 @@
 package lesson3;
 
-import java.util.*;
-
 /**
  * 【数组去重】
  * <p>
