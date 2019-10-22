@@ -31,9 +31,7 @@ public class TrapRainWater {
       } else {
         int pre = stack.pop();
         if (!stack.isEmpty()) {
-          // find the smaller height between the two sides
           int minHeight = Math.min(heights[stack.peek()], heights[i]);
-          // calculate the area
           water += (minHeight - heights[pre]) * (i - stack.peek() - 1);
         }
       }
