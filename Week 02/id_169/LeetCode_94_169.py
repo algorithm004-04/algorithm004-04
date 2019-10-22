@@ -18,6 +18,22 @@ class Solution:
         nodes += self.inorderTraversal(root.right)
         return nodes
 
+    def inorderTraversal2(self, root: TreeNode) -> List[int]:
+        """
+        迭代法
+        """
+        if not root:
+            return []
+        current, stack, output = root, [], []
+        while current or len(stack) > 0:
+            while current:
+                stack.append(current)
+                current = current.left
+            current = stack.pop()
+            output.append(current.val)
+            current = current.right
+        return output
+
 
 root = TreeNode(1)
 root.right = TreeNode(2)
