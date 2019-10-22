@@ -54,22 +54,5 @@ class Solution:
 
         return maxArea
 
-
-    def largestRectangleAreaTooMuchTime(self, heights: [int]) -> int:
-        # 枚举每根柱子，找到这个柱子可构成的最大面积。例如对于第三根柱子5来说，向左找到第一个比他小的元素是1，向右找到第一个比他小的元素是2，那么包含它的最大面积就是5*(4-1)-1=10
-        #这个思路没错，但是由于时间复杂度是O(n^2)，超时了
-        maxArea = 0
-        for i in range(len(heights)): 
-            left, right = i, i
-            while left > 0 and heights[left-1] >= heights[i]: 
-                left -= 1
-            while right < len(heights)-1 and heights[right+1] >= heights[i]: 
-                right += 1
-            maxArea = max(maxArea, heights[i]*(right-left+1))
-        return maxArea
-
-
-
-print(Solution().largestRectangleArea([1,1]))
 # @lc code=end
 
