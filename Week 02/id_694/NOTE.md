@@ -13,11 +13,11 @@
 
 第六课：
 
-- [ ] https://leetcode-cn.com/problems/binary-tree-inorder-traversal/
-- [ ] https://leetcode-cn.com/problems/binary-tree-preorder-traversal/
-- [ ] https://leetcode-cn.com/problems/n-ary-tree-postorder-traversal/
-- [ ] https://leetcode-cn.com/problems/n-ary-tree-preorder-traversal/
-- [ ] https://leetcode-cn.com/problems/n-ary-tree-level-order-traversal/
+- [x] https://leetcode-cn.com/problems/binary-tree-inorder-traversal/  (94)
+- [x] https://leetcode-cn.com/problems/binary-tree-preorder-traversal/  (144)
+- [x] https://leetcode-cn.com/problems/n-ary-tree-postorder-traversal/  (590)
+- [x] https://leetcode-cn.com/problems/n-ary-tree-preorder-traversal/  (589)
+- [x] https://leetcode-cn.com/problems/n-ary-tree-level-order-traversal/ (429)
 
 第七课：
 
