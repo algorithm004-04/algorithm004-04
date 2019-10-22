@@ -10,12 +10,15 @@
 
 2.把有关前提说完后，开始来介绍里面两个有代表性的方法put(K,V);get(K)。为了能更清楚的说明，我就直接贴代码，然后写注释
     (1)put(K,V)方法：
+    
     public V put(K key, V value) {
         //调用putVal方法
         return putVal(hash(key), key, value, false, true);
     }
+    
     来看看putVal方法
     hash把key求hash值;key和value分别是键值对，onlyIfAbsent如果里的值已存在，则不去覆盖原来的值，evict我也没太看懂这是干嘛的，影响不大
+    
     final V putVal(int hash, K key, V value, boolean onlyIfAbsent, boolean evict) {
         Node<K,V>[] tab; Node<K,V> p; int n, i;
         if ((tab = table) == null || (n = tab.length) == 0)
