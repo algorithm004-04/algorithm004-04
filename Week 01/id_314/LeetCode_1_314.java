@@ -21,7 +21,7 @@ import java.util.Map;
  * @Author: wangchuande
  * @Date: 2019/10/20 19:53
  */
-public class TwoSum {
+public class LeetCode_1_314 {
     public int[] twoSum(int[] nums, int target) {
         if (nums.length == 0) {
             return new int[0];
@@ -45,11 +45,11 @@ public class TwoSum {
     }
 
     public static void main(String[] args) {
-        TwoSum twoSum = new TwoSum();
+        LeetCode_1_314 leetCode1314 = new LeetCode_1_314();
         int[] testData = new int[]{3,2,4};
         int[] expected = new int[]{1,2};
 
-        int[] result = twoSum.twoSum(testData, 6);
+        int[] result = leetCode1314.twoSum(testData, 6);
 
         System.out.println("Is Pass: " + Arrays.equals(result, expected));
     }

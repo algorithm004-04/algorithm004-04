@@ -5,7 +5,7 @@ import java.util.Deque;
  * @Author: wangchuande
  * @Date: 2019/10/20 20:37
  */
-public class TrappingRainWater {
+public class LeetCode_42_314 {
     public int trap(int[] height) {
         int count = 0;
         if (height.length == 0) {
@@ -38,13 +38,13 @@ public class TrappingRainWater {
     }
 
     public static void main(String[] args) {
-        TrappingRainWater trappingRainWater = new TrappingRainWater();
+        LeetCode_42_314 leetCode42314 = new LeetCode_42_314();
 //        int[] testData = new int[]{0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1};
 //        int[] testData = new int[]{2, 1, 0, 2};
         int[] testData = new int[]{5,2,1,2,1,5};
         int expected = 14;
-        trappingRainWater.trap(testData);
+        leetCode42314.trap(testData);
 
-        System.out.println("Is Pass: " + (trappingRainWater.trap(testData) == expected));
+        System.out.println("Is Pass: " + (leetCode42314.trap(testData) == expected));
     }
 }
