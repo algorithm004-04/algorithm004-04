@@ -21,7 +21,7 @@ import java.util.Arrays;
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  * @author Neo
  */
-public class LeetCode_1_283 {
+public class LeetCode_283_574 {
     public static void main(String[] args) {
         int nums[] = {0,1,0,1,3,12};
         moveZeroes1(nums);
