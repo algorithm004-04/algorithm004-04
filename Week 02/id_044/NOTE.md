@@ -1,6 +1,6 @@
 # NOTE
 1.关于HashMap有几个前提先说清楚，要不然后面看代码的时候也是懵的(以JDK1.8为例来说明)
-    (1).HashMap继承(extends)自 AbstractMap<K,V>抽象(abstract)类 实现(implements)了Map<K,V>, Cloneable, Serializable三个接口
+    (1).HashMap继承(extends)自 AbstractMap<K,V>抽象(abstract)类 实现(implements)了Map<K,V>,Cloneable, Serializable三个接口
     (2).DEFAULT_INITIAL_CAPACITY = 1 << 4;初始容量为1*2*2*2*2=16(左移1位就是乘以2，左移4位就是乘以2^4)。MAXIMUM_CAPACITY = 1 << 30;最大容量为(2^30)
     (3).DEFAULT_LOAD_FACTOR = 0.75f;初始加载因子，容量*加载因子=阀值，如果添加的元素大于这个阀值，就两倍扩容
     (4).TREEIFY_THRESHOLD = 8;这个变量我的理解为，如果一个Key对应的Hash表中的元素超过8个，就转换为树(这里转换为红黑树)，在后面还有一个值决定是不是转换为树
