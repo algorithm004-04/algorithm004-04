@@ -26,13 +26,6 @@ class Solution {
     }
 }
 
-$nums = [-1, -100, 3, 99];
-$k = 2;
-
-$s = new Solution();
-$s->mergeTwoLists($nums, $k);
-print_r($nums);
-
 ?>
 
 
