@@ -43,7 +43,7 @@ class Solution {
 //                    ll.add(num[k]); ll.add(num[left]); ll.add(num[right]);
 //                    list.add(ll);
                     //asList：数组转换为list
-                    list.add(Arrays.asList(num[k], nums[left], nums[right]));
+                    list.add(Arrays.asList(nums[k], nums[left], nums[right]));
                     //lef和right指向的元素也不可重复
                     while(left < right && nums[left] == nums[left + 1]) left++;
                     while(left < right && nums[right] == nums[right - 1]) right--;
