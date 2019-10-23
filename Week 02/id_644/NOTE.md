@@ -83,6 +83,35 @@ Get --> return(e=getNode(hash(key),key))==null?null:e.value;
 		        }
 		        return null;
     }
+Get方法
+Get --> return(e=getNode(hash(key),key))==null?null:e.value;
+	getNodegetNode(inthash,Objectkey) :
+		final Node<K,V> getNode(int hash, Object key) {
+		        Node<K,V>[] tab; Node<K,V> first, e; int n; K k;
+		        if ((tab = table) != null && (n = tab.length) > 0 &&         // 1、查看表是否存在
+		            (first = tab[(n - 1) & hash]) != null) {
+		            if (first.hash == hash && // always check first node
+		                ((k = first.key) == key || (key != null && key.equals(k))))     2、查看是不是第一个元素
+		                return first;
+		            if ((e = first.next) != null) {                                                  3、判定节点的形式（链表还是 树结构）
+		                if (first instanceof TreeNode)
+		                    return ((TreeNode<K,V>)first).getTreeNode(hash, key);  
+		                do {
+		                    if (e.hash == hash &&
+		                        ((k = e.key) == key || (key != null && key.equals(k))))
+		                        return e;
+		                } while ((e = e.next) != null);                       4、遍历链表
+		            }
+		        } 
+		        return null;                              5、没有，返回null
+		    }
+
+	1、看看表是否存在
+	2、查看是不是第一个元素
+	3、判定节点的形式  链表还是树
+	4、遍历链表 
+	5、没有、返回 null
+
 
   
 
