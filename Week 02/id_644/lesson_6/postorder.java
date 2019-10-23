@@ -28,7 +28,21 @@ public class postorder {
         }
         res.add(root.val);
     }
-    //模拟
+    //模拟 stack
+	public void helper(Node root) {
+        if ( root == null ) return;
+        Stack<Node> stack = new Stack<>();
+        stack.push(root);
+        Node  cur = root;
+        while(!stack.isEmpty()) {
+            cur = stack.pop();
+            res.add(cur.val);
+            for(Node n1 : cur.children) {
+                stack.push(n1);
+            }
+        }
+        Collections.reverse(res);
+    }
 
 
     class Node {
