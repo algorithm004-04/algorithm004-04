@@ -1,42 +1,13 @@
-//解放1：使用递归，先遍历左子树，在访问节点，在遍历右子树
-class Solution1 {
-    public List<Integer> inorderTraversal(TreeNode root) {
-        List<Integer> res = new ArrayList<>();
-        inorder(root,res);
-
-        return res;
-    }
-
-    public void inorder(TreeNode root, List<Integer> res){
-
-        if(root == null){
-            return;
-        }
-
-        if(root.left != null){
-            inorder(root.left,res);
-        }
-
-        res.add(root.val);
-
-        if(root.right != null){
-            inorder(root.right,res);
-        }
-
-    }
-}
-
-
-//解法2：使用栈模拟递归
+//二叉树的后序遍历，使用递归模拟栈进行实现
 struct Command{
     string s;
     TreeNode* node;
     Command(string s, TreeNode* node):s(s), node(node){}
 };
 
-class Solution2 {
+class Solution {
 public:
-    vector<int> inorderTraversal(TreeNode* root) {
+    vector<int> postorderTraversal(TreeNode* root) {
 
         vector<int> res;
         if(root == NULL){
@@ -54,11 +25,12 @@ public:
             if(command.s == "print"){
                 res.push_back(command.node->val);
             } else {
+
+                stack.push(Command("print",command.node));
+
                 if(command.node->right){
                     stack.push(Command("go",command.node->right));
                 }
-
-                stack.push(Command("print",command.node));
 
                 if(command.node->left){
                     stack.push(Command("go",command.node->left));
