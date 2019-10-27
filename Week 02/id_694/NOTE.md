@@ -1,7 +1,5 @@
 # NOTE
 
-  
-
 ## 作业
 
 第五课：
@@ -22,13 +20,13 @@
 第七课：
 
 - [ ] https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-tree/
-- [ ] https://leetcode-cn.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal
-- [ ] https://leetcode-cn.com/problems/combinations/
-- [ ] https://leetcode-cn.com/problems/permutations/
+- [x] https://leetcode-cn.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal  105
+- [x] https://leetcode-cn.com/problems/combinations/  77
+- [ ] https://leetcode-cn.com/problems/permutations/  46
 - [ ] https://leetcode-cn.com/problems/permutations-ii/
 
 第八课：
 
-- [ ] https://leetcode-cn.com/problems/majority-element/description/
-- [ ] https://leetcode-cn.com/problems/letter-combinations-of-a-phone-number/
-- [ ] https://leetcode-cn.com/problems/n-queens/
+- [] https://leetcode-cn.com/problems/majority-element/description/  169
+- [x] https://leetcode-cn.com/problems/letter-combinations-of-a-phone-number/  17
+- [ ] https://leetcode-cn.com/problems/n-queens/  51
