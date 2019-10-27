@@ -1,7 +1,49 @@
 # NOTE
-桶hash table.但是如果桶的数量太大，会变成平衡树结构保证O(logn)，
-不是synchronized 的方法，多个线程可同时访问hashmap。可用collection.synchronized(new HashMap()),使其是synchronized。
-Hashmap 树化，桶的最小阈值 64；
+递归模板：
+public void recur(int level, int param) { 
+
+  // terminator 
+  if (level > MAX_LEVEL) { 
+    // process result 
+    return; 
+  } 
+
+  // process current logic 
+  process(level, param); 
+
+  // drill down 
+  recur( level: level + 1, newParam); 
+
+  // restore current status 
+ 
+}
+
+分治模板：
+def divide_conquer(problem, param1, param2, ...): 
+  # recursion terminator 
+  if problem is None: 
+	print_result 
+	return 
+
+  # prepare data 
+  data = prepare_data(problem) 
+  subproblems = split_problem(problem, data) 
+
+  # conquer subproblems 
+  subresult1 = self.divide_conquer(subproblems[0], p1, ...) 
+  subresult2 = self.divide_conquer(subproblems[1], p1, ...) 
+  subresult3 = self.divide_conquer(subproblems[2], p1, ...) 
+  …
+
+  # process and generate the final result 
+  result = process_result(subresult1, subresult2, subresult3, …)
+	
+  # revert the current level states
+
+HashMap ：
+1、桶的数量太大，会变成平衡树结构保证O(logn)，
+2、不是synchronized 的方法，多个线程可同时访问hashmap。可用collection.synchronized(new HashMap()),使其是synchronized。
+3、Hashmap 树化，桶的最小阈值 64；
 
 关键参数：
 	容量（capacity）:
