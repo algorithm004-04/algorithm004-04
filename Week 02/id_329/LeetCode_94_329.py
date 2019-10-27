@@ -48,25 +48,22 @@ class Solution:
 
     # 2. 利用栈实现
     # 本质还是递归，手动维护一个栈；递归是自动维护一个栈
-    # TODO
+    # 时间复杂度： O(N)
+    # 空间复杂度: O(N)
     def inorderTraversal2(self, root: TreeNode) -> List[int]:
         result = []
         if not root:
             return result
         stack = []
-        while root or len(stack) != 0:
-            while root:
-                stack.append(root)
-                root = root.left
-            node = stack.pop()
-            result.append(node.val)
-            root = root.right
-        return stack
-
-    # 3. 莫里斯遍历
-    # TODO
-    def inorderTraversal3(self, root: TreeNode) -> List[int]:
-        return []
+        curr = root
+        while curr or len(stack) != 0:
+            while curr:
+                stack.append(curr)
+                curr = curr.left
+            curr = stack.pop()
+            result.append(curr.val)
+            curr = curr.right
+        return result
 
 
 if __name__ == '__main__':
@@ -76,5 +73,5 @@ if __name__ == '__main__':
     root_node.right.left = TreeNode(3)
 
     so = Solution()
-    print(so.inorderTraversal(root_node))
+    print(so.inorderTraversal2(root_node))
 
