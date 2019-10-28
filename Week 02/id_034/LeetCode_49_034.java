@@ -1,6 +1,3 @@
-/*
- * Copyright (C) 2019 Baidu, Inc. All Rights Reserved.
- */
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -8,12 +5,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-/**
- * LeetCode_49_034
- *
- * @Author mengdebiao@duxiaoman.com
- * @Date 2019/10/26 10:31 PM
- **/
 public class LeetCode_49_034 {
 
     /**

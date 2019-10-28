@@ -1,16 +1,7 @@
-/*
- * Copyright (C) 2019 Baidu, Inc. All Rights Reserved.
- */
 
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * LeetCode_46_034
- *
- * @Author mengdebiao@duxiaoman.com
- * @Date 2019/10/27 12:11 PM
- **/
 public class LeetCode_46_034 {
 
     public List<List<Integer>> permute(int[] nums) {

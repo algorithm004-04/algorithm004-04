@@ -1,14 +1,4 @@
-/*
- * Copyright (C) 2019 Baidu, Inc. All Rights Reserved.
- */
 
-
-/**
- * LeetCode_236_034
- * 二叉树的最近公共祖先
- * @Author mengdebiao@duxiaoman.com
- * @Date 2019/10/27 11:23 AM
- **/
 public class LeetCode_236_034 {
 
 

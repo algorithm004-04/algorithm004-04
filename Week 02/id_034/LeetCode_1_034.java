@@ -1,12 +1,6 @@
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * LeetCode_1_034
- *
- * @Author mengdebiao@duxiaoman.com
- * @Date 2019/10/26 11:21 PM
- **/
 public class LeetCode_1_034 {
 
     /**

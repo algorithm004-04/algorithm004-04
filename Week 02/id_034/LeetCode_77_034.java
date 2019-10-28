@@ -1,16 +1,7 @@
-/*
- * Copyright (C) 2019 Baidu, Inc. All Rights Reserved.
- */
 
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * 组合
- *
- * @Author mengdebiao@duxiaoman.com
- * @Date 2019/10/27 11:34 AM
- **/
 public class LeetCode_77_034 {
 
     public List<List<Integer>> combine(int n, int k) {

@@ -1,17 +1,9 @@
-/*
- * Copyright (C) 2019 Baidu, Inc. All Rights Reserved.
- */
+
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 
-/**
- *  二叉树的中序遍历
- *
- * @Author mengdebiao@duxiaoman.com
- * @Date 2019/10/26 11:33 PM
- **/
 public class LeetCode_94_034 {
 
     /**
