@@ -22,9 +22,8 @@ def isAnagram(s: str, t: str) -> bool:
             return False
     return True
 
-
-s = "a"
-t = "ab"
-# s = "anagram"
-# t = "nagaram"
+# s = "a"
+# t = "ab"
+s = "anagram"
+t = "nagaram"
 print(isAnagram(s, t))

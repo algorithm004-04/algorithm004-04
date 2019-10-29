@@ -2,8 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="49b9e295-6230-4b48-82a2-46db967f4336" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/049.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/242.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/094_594.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/144_id594.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/590_id594.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Week 01/id_594/001.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Week 01/id_594/011.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Week 01/id_594/015.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Week 01/id_594/020.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Week 01/id_594/021.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Week 01/id_594/024.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Week 01/id_594/026.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Week 01/id_594/066.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Week 01/id_594/070.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Week 01/id_594/084.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Week 01/id_594/088.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Week 01/id_594/141.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Week 01/id_594/142.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Week 01/id_594/155.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Week 01/id_594/189.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Week 01/id_594/206.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Week 01/id_594/239.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Week 01/id_594/283.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Week 01/id_594/641.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Week 01/id_594/70.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/049.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/242.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -12,21 +38,30 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/242.py">
+        <entry file="file://$PROJECT_DIR$/094_594.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
-              <caret line="18" selection-start-line="18" selection-end-line="18" />
+            <state relative-caret-position="323">
+              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/049.py">
+        <entry file="file://$PROJECT_DIR$/590_id594.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+            <state relative-caret-position="306">
+              <caret line="18" selection-start-line="18" selection-end-line="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/144_id594.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -46,26 +81,17 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/242.py" />
         <option value="$PROJECT_DIR$/049.py" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectConfigurationFiles">
-    <option name="files">
-      <list>
-        <option value="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-        <option value="$PROJECT_DIR$/.idea/id_594.iml" />
-        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
-        <option value="$PROJECT_DIR$/.idea/dbnavigator.xml" />
-        <option value="$PROJECT_DIR$/.idea/modules.xml" />
-        <option value="$PROJECT_DIR$/.idea/codeStyles/Project.xml" />
-        <option value="$PROJECT_DIR$/.idea/misc.xml" />
+        <option value="$PROJECT_DIR$/242.py" />
+        <option value="$PROJECT_DIR$/094_594.py" />
+        <option value="$PROJECT_DIR$/144_id594.py" />
+        <option value="$PROJECT_DIR$/590_id594.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
+    <option name="x" value="811" />
+    <option name="y" value="225" />
     <option name="width" value="1920" />
     <option name="height" value="977" />
   </component>
@@ -90,6 +116,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
@@ -105,7 +132,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.049">
+  <component name="RunManager" selected="Python.242">
     <configuration name="049" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="id_594" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -150,8 +177,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.049" />
         <item itemvalue="Python.242" />
+        <item itemvalue="Python.049" />
       </list>
     </recent_temporary>
   </component>
@@ -159,18 +186,12 @@
     <configuration />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1920" height="977" extended-state="0" />
+    <frame x="811" y="225" width="1920" height="977" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="DB Browser" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24960506" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.24960506" />
       <window_info id="Structure" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Educational.CheckDetails" />
-      <window_info anchor="bottom" id="DB Execution Console" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Python Console" />
+      <window_info id="DB Browser" order="2" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.4359255" />
@@ -178,6 +199,12 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="DB Execution Console" order="8" />
+      <window_info anchor="bottom" id="Educational.CheckDetails" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -186,15 +213,36 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/242.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        <state relative-caret-position="493">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/049.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/094_594.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/144_id594.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/590_id594.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
         </state>
       </provider>
     </entry>
