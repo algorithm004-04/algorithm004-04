@@ -1,4 +1,4 @@
-# DFS
+#1.深度优先遍历：采用递归
 class Solution:
     def numIslands(self, grid: List[List[str]]) -> int:
         self.grid = grid
@@ -27,8 +27,8 @@ class Solution:
                 self.xun((x, y - 1))
         else:
             return
-
-# BFS
+                    
+#2.广度优先遍历 采用队列
 class Solution:
     def numIslands(self, grid: List[List[str]]) -> int:
         self.grid = grid
