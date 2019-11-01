@@ -81,3 +81,4 @@ if __name__ == '__main__':
     slt = Solution()
     nums = [4, 5, 6, 7, 0, 1, 2]
     slt.search(nums, 6)
+    
