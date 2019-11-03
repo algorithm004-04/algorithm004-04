@@ -10,11 +10,9 @@ var rotate = function (nums, k) {
         nums.shift(nums.pop())
         k--;
     }
-    return nums
 };
 /**
  * 方法二：1.旋转数组K次;2.旋转头部k个元素;3.旋转n-k个元素
- * 
  */
 var rotate = function (nums, k) {
     const l = nums.length
