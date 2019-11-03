@@ -1,5 +1,12 @@
 # 极客大学「算法训练营第四期 - 4 班」作业提交仓库
 
+## 讲师课件下载地址：
+
+请大家通过该链接查看讲师课件并进行下载：https://pan.baidu.com/s/1k1BHhltBkZLJw0TG-uYC7g 密码:p5op
+
+## 算法4期开学典礼视频+PPT
+
+开学典礼的视频和讲师的PPT已上传，请大家自行下载：https://pan.baidu.com/s/1CMb7kVkRlccJkwNsbRkf_A 提取码: ksv8
 
 ## 仓库目录结构说明
 
