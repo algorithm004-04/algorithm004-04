@@ -2,6 +2,7 @@
  * @param {number} n
  * @param {number} k
  * @return {number[][]}
+ * 回溯法
  */
 var combine = function (n, k) {
     const res = []
