@@ -14,6 +14,6 @@
 - [ ] https://leetcode-cn.com/problems/jump-game-ii/
 
 ** Lesson 11
-- [ ] https://leetcode-cn.com/problems/search-in-rotated-sorted-array/
+- [X] https://leetcode-cn.com/problems/search-in-rotated-sorted-array/ [[file:LeetCode_33_404.java][作业]]
 - [ ] https://leetcode-cn.com/problems/search-a-2d-matrix/
 - [ ] https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array/
