@@ -1,8 +1,8 @@
 * Homework
 ** Lesson 9
-- [ ] https://leetcode-cn.com/problems/word-ladder/description/ [[file:LeedCode-127-404.java][作业]]
+- [X] https://leetcode-cn.com/problems/word-ladder/description/ [[file:LeedCode-127-404.java][作业]]
 - [ ] https://leetcode-cn.com/problems/word-ladder-ii/description/
-- [ ] https://leetcode-cn.com/problems/number-of-islands/
+- [X] https://leetcode-cn.com/problems/number-of-islands/ [[file:LeetCode_200_404.java][作业]]
 - [ ] https://leetcode-cn.com/problems/minesweeper/description/
 
 ** Lesson 10
