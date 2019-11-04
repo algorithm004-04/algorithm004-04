@@ -12,7 +12,7 @@ var inorderTraversal = function (root) {
     return res
 };
 
-//方法一 ：栈
+//方法二：栈
 var inorderTraversal = function (root) {
     if (root === null) return []
     const res = []
