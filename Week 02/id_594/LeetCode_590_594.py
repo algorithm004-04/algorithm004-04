@@ -5,14 +5,15 @@ class TreeNode:
 
 
 def postorder(root: 'Node'):        # 这个解题方式，还不理解是什么意思
-    res = []
-
     if root == None:
-        return res
-
+        return []
+    res = []
     stack = [root]
     while stack:
         root = stack.pop()
-        if not root:
+        if root is not None:
+            res.append(root.val)
+        for i in root.children:
+            stack.append(i)
             
     return res[:: -1]
