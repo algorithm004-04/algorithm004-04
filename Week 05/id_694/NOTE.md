@@ -5,10 +5,10 @@
 ## 作业
 
 - [x] https://leetcode-cn.com/problems/longest-valid-parentheses/   (32)
-- [ ] https://leetcode-cn.com/problems/minimum-path-sum/    (64)
+- [x] https://leetcode-cn.com/problems/minimum-path-sum/    (64)
 - [ ] https://leetcode-cn.com/problems/edit-distance/    (72)
 - [ ] https://leetcode-cn.com/problems/decode-ways   (91)
-- [ ] https://leetcode-cn.com/problems/maximal-square/   (221)
+- [x] https://leetcode-cn.com/problems/maximal-square/   (221)
 - [ ] https://leetcode-cn.com/problems/max-sum-of-rectangle-no-larger-than-k/    (363)
 - [ ] https://leetcode-cn.com/problems/frog-jump/   (403)
 - [ ] https://leetcode-cn.com/problems/split-array-largest-sum    (410)
