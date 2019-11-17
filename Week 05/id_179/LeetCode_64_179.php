@@ -29,3 +29,6 @@ class Solution
         return $grid[$row-1][$col-1];
     }
 }
+
+$s = [[1,3,1],[1,5,1],[4,2,1]];
+echo (new Solution)->minPathSum($s);
