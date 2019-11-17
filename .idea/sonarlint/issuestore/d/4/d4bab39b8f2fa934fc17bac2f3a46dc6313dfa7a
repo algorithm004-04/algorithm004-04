@@ -1,0 +1,8 @@
+
+gsquid:CommentedOutCodeLine#"<This block of commented-out lines of code should be removed.(ÙÝ¢ñÿÿÿÿÿ
+jsquid:S00101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(ÿÎ¼Âýÿÿÿÿ
+ƒ squid:ForLoopCounterChangedCheck"XRefactor the code in order to not assign to this loop counter from within the loop body.(¨…ÄK
+psquid:S3012"YUse "Arrays.copyOf", "Arrays.asList", "Collections.addAll" or "System.arraycopy" instead.(åÿåÉ
+„ squid:ForLoopCounterChangedCheck"XRefactor the code in order to not assign to this loop counter from within the loop body.(Â¨•ù
+o
+squid:S135"YReduce the total number of break and continue statements in this loop to use at most one.(ÃÁËÃ
