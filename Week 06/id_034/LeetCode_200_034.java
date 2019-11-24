@@ -1,11 +1,7 @@
-/*
- * Copyright (C) 2019 Baidu, Inc. All Rights Reserved.
- */
-
 /**
  * LeetCode_200_034
  *
- * @Author mengdebiao@duxiaoman.com
+ * @Author blackberry
  * @Date 2019/11/24 8:04 PM
  **/
 public class LeetCode_200_034 {
