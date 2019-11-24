@@ -22,8 +22,6 @@ class Trie:
 
 
 class Solution:
-    dx = [0, 1, 0, -1]
-    dy = [-1, 0, 1, 0]
 
     def findWords(self, board: List[List[str]], words: List[str]) -> List[str]:
         trie = Trie()
