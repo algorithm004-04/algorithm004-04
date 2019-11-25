@@ -72,10 +72,32 @@
 
 **参考资料：**
 
-* LRU Cache - Linked list https://www.jianshu.com/p/b1ab4a170c3c https://leetcode-cn.com/problems/lru-cache
-* Redis - Skip List https://redisbook.readthedocs.io/en/latest/internal-datastruct/ skiplist.html https://www.zhihu.com/question/20202931
+* LRU Cache - Linked list
+    * https://www.jianshu.com/p/b1ab4a170c3c
+    * https://leetcode-cn.com/problems/lru-cache
+* Redis - Skip List
+    * https://redisbook.readthedocs.io/en/latest/internal-datastruct/skiplist.html
+    * https://www.zhihu.com/question/20202931
 
 ## 栈、队列、双端队列、优先级队列
+
+* 栈(stack)：先入后出 【O(1)】
+* 队列(queue)：先进先出 【O(1)】
+
+* 实际应用中更常用双端队列(deque)【O(1)】:
+
+    ![deque](./assets/deque.png)
+
+* 优先级队列(Priority Queue)：按照元素的优先级取出，插入【O(1)】，取出操作【O(logN)】
+
+**相关源码**
+
+* Stack: http://developer.classpath.org/doc/java/util/Stack-source.html
+* Queue: http://fuseyism.com/classpath/doc/java/util/Queue-source.html 
+* PriorityQueue https://docs.oracle.com/javase/10/docs/api/java/util/PriorityQueue.html
+* Deque https://docs.oracle.com/javase/10/docs/api/java/util/Deque.html
+* heapq : https://docs.python.org/2/library/heapq.html
+* 高性能的 container 库： https://docs.python.org/2/library/collections.html
 
 
 ## 总结
@@ -93,9 +115,12 @@
 **常用的检查链表代码的边界条件：**
 
 1. 链表空时，代码是否正常工作
-2. 只有一个或两个节点时，链表空时，代码是否正常工作
-3. 处理头结点、尾节点时，链表空时，代码是否正常工作
+2. 只有一个或两个节点时，代码是否正常工作
+3. 处理头结点、尾节点时，代码是否正常工作
 
+从栈和队列的操作特性上来看，他们都是⼀种“操作受限”的线性表，只允许在⼀端插⼊和删除数据。
+
+从功能上来说，数组或链表是可以替代栈和队列的，但是特定的数据结构是对特定场景的抽象，数组或链表暴露了太多的接口，使用上自然就更容易出错。
 
 ## 实战
 
@@ -103,41 +128,40 @@
 
 数组：
 
-1. https://leetcode-cn.com/problems/container-with-most-water/
-2. https://leetcode-cn.com/problems/move-zeroes/
-3. https://leetcode-cn.com/problems/climbing-stairs/ 
-4. https://leetcode-cn.com/problems/3sum/ (高频老题）
+- [x] https://leetcode-cn.com/problems/container-with-most-water/  (11)
+- [x] https://leetcode-cn.com/problems/climbing-stairs/  (70)
+- [x] https://leetcode-cn.com/problems/3sum/ (高频老题） (15)
 
 链表：
 
-1. https://leetcode-cn.com/problems/reverse-linked-list/
-2. https://leetcode-cn.com/problems/swap-nodes-in-pairs
-3. https://leetcode-cn.com/problems/linked-list-cycle
-4. https://leetcode-cn.com/problems/linked-list-cycle-ii
-5. https://leetcode-cn.com/problems/reverse-nodes-in-k-group/
+- [x] https://leetcode-cn.com/problems/reverse-linked-list/  (206)
+- [x] https://leetcode-cn.com/problems/swap-nodes-in-pairs  (24)
+- [x] https://leetcode-cn.com/problems/linked-list-cycle  (141)
+- [ ] https://leetcode-cn.com/problems/linked-list-cycle-ii   (142)
+- [ ] https://leetcode-cn.com/problems/reverse-nodes-in-k-group/  (25)
 
 栈、队列
 
-1. https://leetcode-cn.com/problems/valid-parentheses/ （- 最近相关性 —> 栈！）
-2. https://leetcode-cn.com/problems/min-stack/
-3. https://leetcode-cn.com/problems/largest-rectangle-inhistogram 
-4. https://leetcode-cn.com/problems/sliding-window-maximum
+- [x] https://leetcode-cn.com/problems/valid-parentheses/ （- 最近相关性 —> 栈！） (20)
+- [ ] https://leetcode-cn.com/problems/min-stack/  (155)
+- [ ] https://leetcode-cn.com/problems/largest-rectangle-in-histogram  (84)
+- [ ] https://leetcode-cn.com/problems/sliding-window-maximum  (239)
 
 ### 作业
 
 数组、链表：
 
-1. https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/ (26)
-2. https://leetcode-cn.com/problems/rotate-array/ (189)
-3. https://leetcode-cn.com/problems/merge-two-sorted-lists/ (21)
-4. https://leetcode-cn.com/problems/merge-sorted-array/ (88)
-5. https://leetcode-cn.com/problems/two-sum/ (1)
-6. https://leetcode-cn.com/problems/move-zeroes/ (283)
-7. https://leetcode-cn.com/problems/plus-one/ (66)
+- [x] https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/ (26)
+- [x] https://leetcode-cn.com/problems/rotate-array/ (189)
+- [x] https://leetcode-cn.com/problems/merge-two-sorted-lists/ (21)
+- [x] https://leetcode-cn.com/problems/merge-sorted-array/ (88)
+- [x] https://leetcode-cn.com/problems/two-sum/ (1)
+- [x] https://leetcode-cn.com/problems/move-zeroes/ (283) 
+- [x] https://leetcode-cn.com/problems/plus-one/ (66)
 
 栈、队列：
 
-1. https://leetcode.com/problems/design-circular-deque
-2. https://leetcode.com/problems/trapping-rain-water/
-3. 用add first或add last这套新的API改写Deque的代码
-4. 分析Queue和Priority Queue的源码
+- [ ] https://leetcode-cn.com/problems/design-circular-deque  (641)
+- [x] https://leetcode-cn.com/problems/trapping-rain-water/  (42)
+- [ ] 用add first或add last这套新的API改写Deque的代码
+- [ ] 分析Queue和Priority Queue的源码
