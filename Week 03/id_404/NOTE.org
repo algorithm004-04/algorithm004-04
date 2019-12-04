@@ -1,0 +1,19 @@
+* Homework
+** Lesson 9
+- [X] https://leetcode-cn.com/problems/word-ladder/description/ [[file:LeedCode-127-404.java][作业]]
+- [ ] https://leetcode-cn.com/problems/word-ladder-ii/description/
+- [X] https://leetcode-cn.com/problems/number-of-islands/ [[file:LeetCode_200_404.java][作业]]
+- [ ] https://leetcode-cn.com/problems/minesweeper/description/
+
+** Lesson 10
+- [ ] https://leetcode-cn.com/problems/lemonade-change/description/
+- [ ] https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii/description/
+- [ ] https://leetcode-cn.com/problems/assign-cookies/description/
+- [ ] https://leetcode-cn.com/problems/walking-robot-simulation/description/
+- [ ] https://leetcode-cn.com/problems/jump-game/
+- [ ] https://leetcode-cn.com/problems/jump-game-ii/
+
+** Lesson 11
+- [X] https://leetcode-cn.com/problems/search-in-rotated-sorted-array/ [[file:LeetCode_33_404.java][作业]]
+- [ ] https://leetcode-cn.com/problems/search-a-2d-matrix/
+- [ ] https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array/

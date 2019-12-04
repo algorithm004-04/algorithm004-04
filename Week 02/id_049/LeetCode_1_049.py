@@ -1,6 +1,6 @@
-def twoSumsHash(self, nums: List[int], target: int) -> List[int]:
+def twoSum(self, nums: List[int], target: int) -> List[int]:
     hashmap = {}
     for i, v in enumerate(nums):
-        if hashmap.get(target-v) in hashmap:
-            return [hashmap.get(target-v),i]
-    hashmap[v]=i
+        if hashmap.get(target-v) is not None:
+            return [hashmap.get(target-v), i]
+        hashmap[v] = i

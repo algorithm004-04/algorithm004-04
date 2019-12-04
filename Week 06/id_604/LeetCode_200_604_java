@@ -1,0 +1,297 @@
+//并查集
+class Solution {
+
+    //创建一个并查集的类
+    private class UnionFind{
+
+        int m,n;
+        int father[];
+        int count = 0;
+
+        UnionFind(char[][] grid){
+            //m,n附上初值
+            m = grid.length;//行
+            n = grid[0].length;//列
+            father = new int[m*n];
+            for(int i = 0; i < m ; i++)
+                for(int j = 0; j < n; j++){
+                    if(grid[i][j] == '1'){
+                        int id;
+                        id = i*n + j;//二维坐标系转换成一维坐标系
+                        father[id] = id;
+                        count ++;
+
+                    }
+                }
+        }
+
+        public void union(int node1, int node2) {
+            int find1 = find(node1);
+            int find2 = find(node2);
+            if(find1 != find2) {
+                father[find1] = find2;
+                count--;
+            }
+        }
+
+        public int find (int node) {
+            if (father[node] == node) {
+                return node;
+            }
+            father[node] = find(father[node]);
+            return father[node];
+        }
+    }
+
+
+
+    private int[][] distance = {{0,1},{0,-1},{1,0},{-1,0}};
+    //使用前面实现的并查集，来解决LeetCode的200题岛屿问题
+    public int numIslands(char[][] grid) {
+
+        //判断输入条件的合法性
+        if(grid == null || grid.length == 0 || grid[0].length == 0){
+            return 0;
+        }
+
+        UnionFind uf = new UnionFind(grid);
+        int rows = grid.length;
+        int cols = grid[0].length;
+
+        for(int i = 0 ; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                if (grid[i][j] == '1') {
+                    for (int[] d : distance) {//ｄｉｓｔａｎｃｅ是二维数组，赋值给一维数组int[] d
+                        int x = i + d[0];
+                        int y = j + d[1];
+                        //判断上下左右坐标的有效性，数组可能越界
+                        if (x >= 0 && x < rows && y >= 0 && y < cols && grid[x][y] == '1') {
+                            //将二维坐标系转换成一维坐标系，在利用并查集
+                            int id1 = i * cols + j;
+                            int id2 = x * cols + y;
+                            uf.union(id1, id2);
+                        }
+                    }
+                }
+            }
+        }
+        return uf.count;
+    }
+}
+
+
+//并查集，第二版，合并的使用使用ｒａｎｋ进行优化
+class Solution {
+
+    //创建一个并查集的类
+    private class UnionFind{
+
+        int m,n;
+        int father[];
+        int[] rank; //rank[i]表示以ｉ为根的集合所表示的树的层数
+        int count = 0;
+
+
+        UnionFind(char[][] grid){
+            //m,n附上初值
+            m = grid.length;//行
+            n = grid[0].length;//列
+            father = new int[m*n];
+            rank   = new int[m*n];
+            for(int i = 0; i < m ; i++)
+                for(int j = 0; j < n; j++){
+                    if(grid[i][j] == '1'){//Ｎｏｔｅ：传入的参数是字符，所以这里判断相等要使用‘１’
+                        int id;
+                        id = i*n + j;//二维坐标系转换成一维坐标系
+                        father[id] = id;//father【ｉｄ】表明这个元素属于哪个集合，初始化的时候题目中的１都属于不同的集合
+                        rank[id] = 1; //初始化的时候都是指向自己所以树的高度为１
+                        count ++;
+
+                    }
+                }
+        }
+
+
+        //基于ｒａｎｋ的优化，ｒａｎｋ【ｉ】表示根节点为ｉ的树的高度
+        //那么合并的时候就要将矮的树往高的树上进行合并
+        public void union(int node1, int node2) {
+            int root1 = find(node1);
+            int root2 = find(node2);
+
+            if(root1 == root2)
+                return;
+
+            //树从ｌｏｗ－> ｈｉｇｈ上合并
+            if (rank[root1] < rank[root2]){
+                father[root1] = root2;//树的高度不变所以不需要维护ｒａｎｋ
+            }
+            else if(rank[root1] > rank[root2]){
+
+                father[root2] = root1;//树的高度不变所以不需要维护ｒａｎｋ
+            }
+            else if(rank[root1] == rank[root2]){
+                father[root2] = root1;
+                rank[root1]++;
+
+            }
+
+            count--;
+
+        }
+
+
+
+        public int find (int node) {
+            if (father[node] == node) {
+                return node;
+            }
+            father[node] = find(father[node]);
+            return father[node];
+        }
+    }
+
+
+
+    private int[][] distance = {{0,1},{0,-1},{1,0},{-1,0}};
+    //使用前面实现的并查集，来解决LeetCode的200题岛屿问题
+    public int numIslands(char[][] grid) {
+
+        //判断输入条件的合法性
+        if(grid == null || grid.length == 0 || grid[0].length == 0){
+            return 0;
+        }
+
+        UnionFind uf = new UnionFind(grid);
+        int rows = grid.length;
+        int cols = grid[0].length;
+
+        for(int i = 0 ; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                if (grid[i][j] == '1') {
+                    for (int[] d : distance) {//ｄｉｓｔａｎｃｅ是二维数组，赋值给一维数组int[] d
+                        int x = i + d[0];
+                        int y = j + d[1];
+                        //判断上下左右坐标的有效性，数组可能越界
+                        if (x >= 0 && x < rows && y >= 0 && y < cols && grid[x][y] == '1') {
+                            //将二维坐标系转换成一维坐标系，在利用并查集
+                            int id1 = i * cols + j;
+                            int id2 = x * cols + y;
+                            uf.union(id1, id2);
+                        }
+                    }
+                }
+            }
+        }
+        return uf.count;
+    }
+}
+
+//并查集第三版，在第二版的ｒａｎｋ基本上增加了路径压缩
+class Solution {
+
+    //创建一个并查集的类
+    private class UnionFind{
+
+        int m,n;
+        int father[];
+        int[] rank; //rank[i]表示以ｉ为根的集合所表示的树的层数
+        int count = 0;
+
+
+        UnionFind(char[][] grid){
+            //m,n附上初值
+            m = grid.length;//行
+            n = grid[0].length;//列
+            father = new int[m*n];
+            rank   = new int[m*n];
+            for(int i = 0; i < m ; i++)
+                for(int j = 0; j < n; j++){
+                    if(grid[i][j] == '1'){//Ｎｏｔｅ：传入的参数是字符，所以这里判断相等要使用‘１’
+                        int id;
+                        id = i*n + j;//二维坐标系转换成一维坐标系
+                        father[id] = id;//father【ｉｄ】表明这个元素属于哪个集合，初始化的时候题目中的１都属于不同的集合
+                        rank[id] = 1; //初始化的时候都是指向自己所以树的高度为１
+                        count ++;
+
+                    }
+                }
+        }
+
+
+        //基于ｒａｎｋ的优化，ｒａｎｋ【ｉ】表示根节点为ｉ的树的高度
+        //那么合并的时候就要将矮的树往高的树上进行合并
+        public void union(int node1, int node2) {
+            int root1 = find(node1);
+            int root2 = find(node2);
+
+            if(root1 == root2)
+                return;
+
+            //树从ｌｏｗ－> ｈｉｇｈ上合并
+            if (rank[root1] < rank[root2]){
+                father[root1] = root2;//树的高度不变所以不需要维护ｒａｎｋ
+            }
+            else if(rank[root1] > rank[root2]){
+
+                father[root2] = root1;//树的高度不变所以不需要维护ｒａｎｋ
+            }
+            else if(rank[root1] == rank[root2]){
+                father[root2] = root1;
+                rank[root1]++;
+
+            }
+
+            count--;
+
+        }
+
+
+
+        public int find (int node) {
+
+            while(node != father[node]){
+                father[node] = father[father[node]];//对节点进行路径压缩
+                node = father[node];
+
+            }
+
+            return node;
+
+        }
+    }
+
+
+
+    private int[][] distance = {{0,1},{0,-1},{1,0},{-1,0}};
+    //使用前面实现的并查集，来解决LeetCode的200题岛屿问题
+    public int numIslands(char[][] grid) {
+
+        //判断输入条件的合法性
+        if(grid == null || grid.length == 0 || grid[0].length == 0){
+            return 0;
+        }
+
+        UnionFind uf = new UnionFind(grid);
+        int rows = grid.length;
+        int cols = grid[0].length;
+
+        for(int i = 0 ; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                if (grid[i][j] == '1') {
+                    for (int[] d : distance) {//ｄｉｓｔａｎｃｅ是二维数组，赋值给一维数组int[] d
+                        int x = i + d[0];
+                        int y = j + d[1];
+                        //判断上下左右坐标的有效性，数组可能越界
+                        if (x >= 0 && x < rows && y >= 0 && y < cols && grid[x][y] == '1') {
+                            //将二维坐标系转换成一维坐标系，在利用并查集
+                            int id1 = i * cols + j;
+                            int id2 = x * cols + y;
+                            uf.union(id1, id2);
+                        }
+                    }
+                }
+            }
+        }
+        return uf.count;
+    }
+}
