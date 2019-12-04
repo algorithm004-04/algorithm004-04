@@ -1,0 +1,72 @@
+* 精通一个领域的3个要点
+- Chunk it up 切碎知识点
+- Deliberate Practicing 刻意练习
+- Feed back 反馈
+
+* 数据结构的知识点
+- 一维
+  - 基础：数组 array(string), 链表 linked list
+  - 高级：栈 stack, 队列 queue, 双端队列 deque, 集合 set, 映射 map(hash or map),
+    etc
+- 二维
+  - 基础：数 tree, 图 graph
+  - 高级： 二叉搜索树 binary search tree(red-black tree, AVL), 堆 heap, 并查集
+    disjoint set, 字典树 Trie, etc
+- 特殊：
+  - 位运算 bitwise, 布隆过滤器 BloomFilter
+  - LRU Cache
+
+* 算法的知识点
+- if-else, switch -> branch
+- for, while loop -> iteration
+- Recursion (Divide & Conquer, Backtrace)
+- 搜索 Search: 深度优先搜索 Depth first serch, 广度优先搜索 Breadth first
+  search, A* etc
+- 动态规划 Dynamic Programming
+- 二分查找 Binary Search
+- 贪心算法 Greedy
+- 数学 Math, 几何 Geometry
+注意： 在头脑中回忆上面每种算法的思想和代码模板
+
+* 三位一体训练法
+** 要点一
+- 快速过所有算法知识点，串成知识体系
+- 反复过 *遍数* : 遍数 > 每次时长
+- 背诵、记忆、默写: 算法模板
+
+** 要点二
+ - 学以致用: 马上开始做题 [[https://leetcode-cn.com][leetcode]]
+ - 按照知识体系有组织、系统性地做题
+
+** 要点三
+- 刷题要过遍数: 遍数 > 每题时长
+- 五遍刷题法（一体）
+  - 五毒神掌（秘籍）
+
+* 切题四件套
+- Clarification
+- Possible solutions
+  compare (time/space)
+  optimal (加强)
+- Coding （多写）
+- Test cases
+
+* 刷题法（五毒神功）
+** 刷题第一遍
+    - 5-10分钟: 读题 + 思考
+    - 直接看解法！直接看解法！直接看解法！
+    - 背诵、默写好的解法。多解法，比较解法优劣
+
+** 第二遍
+- 马上自己写 -> LeetCode 提交
+- 多种解法比较、体会 -> 优化
+
+** 第三遍
+- 过了一天后，再重复做题
+- 不同解法的熟练程度 -> 专项练习
+
+** 第四遍
+- 过了一周：反复回来重复练习
+
+** 第五遍
+- 面试前一周恢复性练习
