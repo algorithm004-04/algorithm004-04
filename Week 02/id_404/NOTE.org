@@ -63,7 +63,7 @@ def divide_conquer(problem, param1, param2):
 
 ** Lesson 6
 - [X] [[https://leetcode-cn.com/problems/binary-tree-inorder-traversal/][94-binary-tree-inorder-traversal]] [[file:LeetCode_94_404.java][作业]]
-- [X] [[https://leetcode-cn.com/problems/binary-tree-preorder-traversal/][144-binary-tree-preorder-traversal]] [[file:LeetCode_144_404.java][作业]]
+- [X] [[https://leetcode-cn.com/problems/binary-tree-preorder-traversal/][144-binary-tree-preorder-traversal]] [file:LeetCode_144_404.java][作业]]
 - [X] [[https://leetcode-cn.com/problems/n-ary-tree-postorder-traversal/][590-binary-tree-postorder-traversal]] [[file:LeetCode_590_404.java][作业]]
 - [ ] [[https://leetcode-cn.com/problems/n-ary-tree-preorder-traversal/][589-n-ary-tree-preorder-traversal]]
 - [ ] [[https://leetcode-cn.com/problems/n-ary-tree-level-order-traversal/][429-nary-tree-level-order-traversal]]
