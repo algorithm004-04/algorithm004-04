@@ -1,0 +1,24 @@
+class Solution {
+    public List<List<String>> groupAnagrams(String[] strs) {
+       if ((strs == null || strs.length == 0)) {
+            // 询问如果是strs是[] 那么返回 null 还是 空 List
+            return new ArrayList<>();
+        }
+        // 确定数据结构
+        Map<String, List<String>> ans = new HashMap<>();
+        // 确定算法
+        for (String str : strs) {
+            char [] cast = str.toCharArray();
+            Arrays.sort(cast);
+            // 重构我的代码,抽取key
+            String key = String.valueOf(cast);
+            if (!ans.containsKey(key)) {
+                ans.put(key,new ArrayList<>());
+            }
+            ans.get(key).add(str);
+        }
+        // 测试
+        // ArrayList 可以通过传入Collection来构建
+        return new ArrayList<>(ans.values());
+    }
+}
