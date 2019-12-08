@@ -1,0 +1,81 @@
+* 递归
+1. 递归的特点或者说优势是能天然维护一个调用函数栈，并且每个函数栈有自己的变量域互不干扰，当然可以通过参数进行变量传递。缺点是不小心（不使用参数缓存和尾递归优化）会写出性能很差的代码。
+2. 递归的难点在于人脑无法每一步的状态调用模拟想象，特别是一个递归里多次调用自己
+   时，所以很难理解。但开始时可以再纸上画下理解，后面其实可以不用人脑递归。
+3. 普通递归模板
+   - recursion teminator 终结条件
+   - process logic in current level 逻辑处理
+   - drill down 到下一层
+   - reverse the current level states if needed 当前层状态清理
+      #+BEGIN_SRC python
+   def recursion(level, param1, param2, ...):
+       # recursion teminator
+       if level < MAX_LEVEL:
+           process_result
+           return
+
+       # process logic in current level
+       process(level, data...)
+
+       # drill down
+       self.recursion(level + 1, p1, ...)
+
+       # reverse the current level status if needed
+      #+END_SRC
+4. 分治算法的思想是把一个问题，分解为若干子问题，最后将子问题的结果合并。
+   - recursion teminator 终结条件
+   - prepare data 数据预处理
+   - conquer subproblems 处理子问题
+   - process and generate the final result 处理并合并子问题结果计算最终结果
+   - revert the current level states 清理当前状态
+      #+BEGIN_SRC python
+def divide_conquer(problem, param1, param2):
+    # recursion teminator
+    if problem is None:
+        print_result
+        return
+
+    # prepare data
+    data = prepare_data(problem)
+    subproblems = (problem, data)
+
+    # conquer subproblems
+    subresult1 = self.divide_conquer(subproblems[0], p1, ...)
+    subresult2 = self.divide_conquer(subproblems[1], p1, ...)
+    subresult3 = self.divide_conquer(subproblems[2], p1, ...)
+
+    # process and generate the final result
+    result = process_result(subresult1, subresult2, subresult3)
+
+    # revert the current level states
+      #+END_SRC
+
+5. 二叉树遍历分为广度优先和深度优先，由于二叉树直接记录父子节点的连接，所以深度
+   优先遍历天然方便。深度优先遍历对根节点逻辑得处理是在，左节点和右节点之
+   前、中间还是后面就分为前序遍历(=preorder=)、中序遍历(=inorder=)和后序遍历(=postorder=)
+
+
+* Homework
+** Lesson 5
+- [X] [[https://leetcode-cn.com/problems/valid-anagram/description/][242-valid-anagram]] [[file:LeetCode_242_404.java][作业]]
+- [ ] [[https://leetcode-cn.com/problems/group-anagrams/][49-group-anagram]]
+- [ ] [[https://leetcode-cn.com/problems/two-sum/description/][1-two-sum]]
+
+** Lesson 6
+- [X] [[https://leetcode-cn.com/problems/binary-tree-inorder-traversal/][94-binary-tree-inorder-traversal]] [[file:LeetCode_94_404.java][作业]]
+- [X] [[https://leetcode-cn.com/problems/binary-tree-preorder-traversal/][144-binary-tree-preorder-traversal]] [file:LeetCode_144_404.java][作业]]
+- [X] [[https://leetcode-cn.com/problems/n-ary-tree-postorder-traversal/][590-binary-tree-postorder-traversal]] [[file:LeetCode_590_404.java][作业]]
+- [ ] [[https://leetcode-cn.com/problems/n-ary-tree-preorder-traversal/][589-n-ary-tree-preorder-traversal]]
+- [ ] [[https://leetcode-cn.com/problems/n-ary-tree-level-order-traversal/][429-nary-tree-level-order-traversal]]
+
+** Lesson 7
+- [X] [[https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-tree/][236-lowest-common-ancestor-of-a-binary-tree]] [[file:LeetCode_236_404.java][作业]]
+- [ ] [[https://leetcode-cn.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal][105-construct-binary-tree-from-preorder-and-inorder-traversal]]
+- [ ] [[https://leetcode-cn.com/problems/combinations/][77-combinations]]
+- [ ] [[https://leetcode-cn.com/problems/permutations/][46-permutations]]
+- [ ] [[https://leetcode-cn.com/problems/permutations-ii/][47-permutations-ii]]
+
+** Lesson 8
+- [ ] [[https://leetcode-cn.com/problems/majority-element/description/][169-majority-element]]
+- [ ] [[https://leetcode-cn.com/problems/letter-combinations-of-a-phone-number/][17-letter-combinations-of-a-phone-number]]
+- [ ][[https://leetcode-cn.com/problems/n-queens/][ 51-n-queens]]
