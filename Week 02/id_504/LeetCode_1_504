@@ -1,0 +1,19 @@
+class Solution {
+    public int[] twoSum(int[] nums, int target) {
+        Map<Integer, Integer> bullet = new HashMap<Integer, Integer>();
+        int i = 0;
+        for (int num : nums) {
+            bullet.put(num,i++);
+        }
+        int[] ans = new int[2];
+        // 遍历每一个a，查看target -a 是否在数组中
+        for (int j = 0; j < nums.length; j++) {
+            ans[0] = j;
+            if (bullet.containsKey(target - nums[j])  && (bullet.get(target-nums[j]) != j)) {
+                ans[1] = bullet.get(target - nums[j]);
+                return ans;
+            }
+        }
+        return ans;
+    }
+}
