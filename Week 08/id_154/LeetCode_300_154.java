@@ -24,6 +24,7 @@ public class LeetCode_300_154 {
         if (nums.length == 0) {
             return 0;
         }
+        
         int[] dp = new int[nums.length];
         dp[0] = 1;
         int maxans = 1;
