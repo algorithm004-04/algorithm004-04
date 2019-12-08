@@ -2,37 +2,29 @@ import javafx.util.Pair;
 
 import java.util.*;
 
-public class LeetCode_127_229 {
+public class LeetCode_127_dancijielong {
 
-    public static void main(String[] args) {
-        int num = new Rolution().ladderLength("hit","cog", Arrays.asList(new String[]{"hot", "dot", "dog", "lot", "log", "cog"}));
-        System.out.println("num = " + num);
-    }
-
-    /**
-     * 广度优先搜索
-     * @param beginWord
-     * @param endWord
-     * @param wordList
-     * @return
-     */
     public int ladderLength(String beginWord, String endWord, List<String> wordList) {
         int L = beginWord.length();
-        HashMap<String, ArrayList<String>> allComboDict = new HashMap<String, ArrayList<String>>();
+
+        HashMap<String, ArrayList<String>> allComboDict = new HashMap<>();
+
         wordList.forEach(
                 word -> {
                     for (int i = 0; i < L; i++) {
-                        String newWord = word.substring( 0, i) + '*' + word.substring(i + 1, L);
-                        ArrayList<String> transformations =
-                                allComboDict.getOrDefault(newWord, new ArrayList<String>());
+                        String newWord = word.substring(0, i) + '*' + word.substring(i + 1, L);
+                        ArrayList<String> transformations = allComboDict.getOrDefault(newWord, new ArrayList<>());
                         transformations.add(word);
                         allComboDict.put(newWord, transformations);
                     }
                 });
 
+        //BFS
         Queue<Pair<String, Integer>> Q = new LinkedList<Pair<String, Integer>>();
-        Q.add(new Pair(beginWord, 1));
-        HashMap<String, Boolean> visited = new HashMap<String, Boolean>();
+        Q.add(new Pair<>(beginWord, 1));
+
+        //确保不会重复相同的单词
+        HashMap<String, Boolean> visited = new HashMap<>();
         visited.put(beginWord, true);
 
         while (!Q.isEmpty()) {
@@ -41,18 +33,20 @@ public class LeetCode_127_229 {
             int level = node.getValue();
             for (int i = 0; i < L; i++) {
                 String newWord = word.substring(0, i) + '*' + word.substring(i + 1, L);
-                for (String adjacentWord : allComboDict.getOrDefault(newWord, new ArrayList<String>())) {
+                for (String adjacentWord : allComboDict.getOrDefault(newWord, new ArrayList<>())) {
                     if (adjacentWord.equals(endWord)) {
                         return level + 1;
                     }
+
                     if (!visited.containsKey(adjacentWord)) {
                         visited.put(adjacentWord, true);
-                        Q.add(new Pair(adjacentWord, level + 1));
+                        Q.add(new Pair<>(adjacentWord, level + 1));
                     }
                 }
             }
         }
-
         return 0;
     }
+
+
 }
