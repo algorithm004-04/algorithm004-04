@@ -1,0 +1,119 @@
+* 知识点
+** 数组、链表、跳表
+*** 数组 Array
+*数组(Array)是一种线性表数据结构，使用一组连续的内存空间来存储具有相同类型的数据
+(也可以是泛型)*
+
+**** 特性
+1. 随机访问（O(1)）
+
+2. 插入和删除操作（O(n) )
+   在第k个位置插入数据需要将k后面的元素后移一位；将第k个位置的元素删除需要将k后面的元素前移一位
+
+**** 时间复杂度：
+| 操作    | 复杂度  |
+|---------+--------|
+| prepend | O(1)   |
+| append  | O(1)   |
+| lookup  | O(1)   |
+| insert  | O(n)   |
+| delete  | O(n)   |
+
+**** 参考资料
+- [[http://developer.classpath.org/doc/java/util/ArrayList-source.html][Java 源码分析（ArrayList）]]
+
+*** 链表 Linked list
+*链表不需要一块连续的内存空间，它通过指针将一组零散的内存块串联起来*
+每个节点除了存储数据外还要记录下一个节点的地址，头结点记录链表基地址。
+
+常见的结构有：单链表、双链表、循环链表、双向循环链表。
+循环链表的尾节点的 =next= 指针指向头结点；
+双向链表在单链表的基础上增加 =prev= 指针指向前驱节点，所以支持O(1)的时间复杂度找到前驱节点。
+
+**** 特性
+1. 插入和删除操作只需要考虑相邻节点的指针变化，时间复杂度为O(1)
+2. 随机访问的性能没有数组好，访问第k个元素需要O(n)的时间复杂度
+
+**** 时间复杂度：
+| 操作    | 复杂度  |
+|---------+--------|
+| prepend | O(1)   |
+| append  | O(1)   |
+| lookup  | O(n)   |
+| insert  | O(1)   |
+| delete  | O(1)   |
+
+**** 参考资料
+- [[https://www.geeksforgeeks.org/implementing-a-linked-list-in-java-using-class/][Linked List 的标准实现代码]]
+- [[http://www.cs.cmu.edu/~adamchik/15-121/lectures/Linked%2520Lists/code/LinkedList.java][Linked List 示例代码]]
+- [[http://developer.classpath.org/doc/java/util/LinkedList-source.html][Java 源码分析（LinkedList）]]
+- [[https://www.jianshu.com/p/b1ab4a170c3c][LRU缓存算法]]
+- [[https://leetcode-cn.com/problems/lru-cache][leetcode lru cache]]
+
+*** 跳表
+在链表的基础上，每隔几个节点提取出一个节点到上一级，抽出来一个索引层，索引层节点
+通过增加一个 =down= 指针指向下层节点。
+
+**** 时间复杂度分析
+按每两个节点抽出一级索引，那第一级就是 =n/2= 个节点，以此类推，第k级索引节点个数就
+是 =n/(2^k)= 。如果有 h 级索引，最高级有 2 个节点，则 =h=log2n - 1=, 每一层最多遍历
+3 个节点，所以 总遍历节点个数最多 =3*h= ，时间复杂度为 O(logn)。
+
+**** 空间复杂度分析
+其实就是对等比数列求和，空间复杂度为 O(n)
+
+**** 参考资料：
+- [[https://redisbook.readthedocs.io/en/latest/internal-datastruct/skiplist.html][跳跃表]]
+- [[https://www.zhihu.com/question/20202931][为啥 redis 使用跳表(skiplist)而不是使用 red-black？]]
+
+
+* 学习总结
+1. 五毒神功最高
+   原来试过做 leetcode 原来老想自己想出解法，然后实现。效率很低不说，而且常常会
+   收到挫败感，根本坚持不下来。
+
+   我认为五毒神功精髓是为我所用，学习网站上各种大牛的思路和解法，然后不断重复遍
+   数从而内化为自己的思想。
+
+   让我想起个笑话，有人说学习就像个小偷，就是到别人家里去把除了厨房水槽之外的所
+   有东西搬走，然后我们回头去把厨房水槽也搬走了。
+
+2. 熟练掌握的方法就是不断重复
+   做完 *Lesson 3* 布置的作业感想就是数组和链表使用最多的技巧就是熟练使用指针（包
+   括双指针，快慢指针，从左往右扫描，从右往左扫描，找个锚定点向两边扫描）。而想
+   熟练掌握没有别的途径就是不断重复做。刷题不能只刷一遍。
+
+   PS: 由于我周四才开始刷题，到今天才第三天，所以还没有全部做完。
+   现在已经把 *Lesson 3* 的作业基本刷完了， *Lesson* 4 感觉难度明显提高了很多，只做
+   了一题。
+
+3. 刷题其实非常适合用于学习门新语言。
+   看了下网站的解答，感觉 =java= 的内容最丰富，虽然没有做过 =java= 开发, 但还是决定使用 =java= 答题。
+
+4. 刷题环境的比较。
+   - *VScode* 智能提示最友好，但感觉刷题还是不需要这个。
+   - *leetcode网站* 已经很方便了，能设置 style，按键模式，vim, emacs 都支持感觉比使用
+     vscode 还方便点。重点是测试结果和提交结果是最友好的。别的编辑器可能只有错误，
+     但网站上信息最全。
+   - *emacs* 配合插件，还是 coding 最顺手的，我喜欢的按键风格是 =vim=, 部分又加上
+     *emacs* 风格，所以我现在主力刷题环境还是 emacs
+
+5. 刷题最大误区就是只做一遍。
+
+6. 最主要思想就是提升维度，已空间换时间。
+
+
+* Homework
+** Lesson 3
+ - [X] [[https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/][26-remove-duplicates-from-sorted-array]] [[file:LeetCode_26_404.java][作业]]
+ - [X] [[https://leetcode-cn.com/problems/rotate-array/][189-rorate-array]] [[file:LeetCode_189_404.java][作业]]
+ - [X] [[https://leetcode-cn.com/problems/merge-two-sorted-lists/][21-merge-two-sorted-lists]] [[file:LeetCode_21_404.java][作业]]
+ - [X] [[https://leetcode-cn.com/problems/merge-sorted-array/][88-merge-sorted-array]] [[file:LeetCode_88_404.java][作业]]
+ - [X] [[https://leetcode-cn.com/problems/two-sum/][1-two-sum]] [[file:LeetCode_1_404.java][作业]]
+ - [X] [[https://leetcode-cn.com/problems/move-zeroes][283-move-zeroes]] [[file:LeetCode_283_404.java][作业]]
+ - [X] [[https://leetcode-cn.com/problems/plus-one/][66-plus-one]] [[file:LeetCode_66_404.java][作业]]
+** Lesson 4
+ - [ ] https://leetcode-cn.com/problems/design-circular-deque
+ - [X] https://leetcode-cn.com/problems/trapping-rain-water/
+ - [ ] 用add first 或 add last 这套新的 API 改写 Deque 的代码
+ - [ ] Priority Queue 源码分析
