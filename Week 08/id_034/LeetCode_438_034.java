@@ -1,14 +1,10 @@
-/*
- * Copyright (C) 2019 Baidu, Inc. All Rights Reserved.
- */
-
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * LeetCode_438_034
  *
- * @Author mengdebiao@duxiaoman.com
+ * @Author blackberry
  * @Date 2019/12/8 7:07 PM
  **/
 public class LeetCode_438_034 {

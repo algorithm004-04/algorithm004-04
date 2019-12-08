@@ -1,11 +1,7 @@
-/*
- * Copyright (C) 2019 Baidu, Inc. All Rights Reserved.
- */
-
 /**
  * LeetCode_917_034
  * 仅仅反转字母
- * @Author mengdebiao@duxiaoman.com
+ * @Author blackberry
  * @Date 2019/12/8 6:59 PM
  **/
 public class LeetCode_917_034 {

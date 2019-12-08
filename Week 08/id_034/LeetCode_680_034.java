@@ -1,14 +1,10 @@
-/*
- * Copyright (C) 2019 Baidu, Inc. All Rights Reserved.
- */
-
 /**
  * LeetCode_680
  *
- * @Author mengdebiao@duxiaoman.com
+ * @Author blackberry
  * @Date 2019/12/8 7:23 PM
  **/
-public class LeetCode_680 {
+public class LeetCode_680_034 {
 
     public boolean validPalindrome(String s) {
         int n = s.length();

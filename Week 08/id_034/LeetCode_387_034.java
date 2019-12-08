@@ -4,7 +4,7 @@ import java.util.Map;
 /**
  * LeetCode_387_034
  * blackberry
- * @Author mengdebiao@duxiaoman.com
+ * @Author blackberry
  * @Date 2019/12/8 5:52 PM
  **/
 public class LeetCode_387_034 {
