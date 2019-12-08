@@ -1,0 +1,1 @@
+def maxArea(height) -> int:    # 双指针    i, j, res = 0, len(height)-1, 0    while i < j:        w = j - i        if height[i] < height[j]:            res = max(res, height[i]*w)            i += 1        else:            res = max(res, height[j]*w)            j -= 1    return resex = [1, 8, 6, 2, 5, 4, 8, 3, 7]print(maxArea(ex))
