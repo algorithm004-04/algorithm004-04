@@ -2,12 +2,12 @@ class Solution {
     public String minWindow(String s, String t) {
         if (s.length() == 0 || t.length() == 0) return "";
         char[] answerArray = new char[0]; // 最终找到的子数组
-        int left = 0, right = 0; // 子数组的左右下标
+        int left = 0, right = 0; 
         char[] sArray = s.toCharArray();
         char[] tArray = t.toCharArray();
         int[] charCountInT = new int[128];
-        for (char c : tArray) charCountInT[c]++; // 统计字符串 T 中每个字符的数量
-        int zen = t.length(); // t 字符串所有字符在子数组中还缺的总个数
+        for (char c : tArray) charCountInT[c]++; 
+        int zen = t.length(); 
         while (right < s.length()) {
             charCountInT[sArray[right]]--;
             if (charCountInT[sArray[right]] >= 0) zen--;
