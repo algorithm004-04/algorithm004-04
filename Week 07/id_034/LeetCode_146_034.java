@@ -1,12 +1,6 @@
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * LeetCode_146_034
- *
- * @Author mengdebiao@duxiaoman.com
- * @Date 2019/12/1 11:09 AM
- **/
 class LRUCache {
 
     private int capicty;
